@@ -20,7 +20,7 @@ export default function Navbar({ darkmode, setDarkmode }: navbarProps) {
 
   return (
     <div
-      className={`flex flex-row ${bgColor} p-4 px-6 justify-between items-center`}
+      className={`flex flex-row ${bgColor} p-4 px-6 justify-between items-center shadow-lg`}
     >
       {/* Liens vers les différentes sections du site */}
       <p className={`${titleColor} font-bold text-xl`}>MP</p>
