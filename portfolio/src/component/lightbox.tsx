@@ -4,24 +4,15 @@ type LightboxProps = {
 };
 
 export default function Lightbox({ darkmode, image }: LightboxProps) {
-  let bgColor = "bg-white";
-  let borderColor = "border-white";
-
-  if (darkmode) {
-    bgColor = "bg-[#3A3A5A]";
-    borderColor = "border-gray-600";
-  }
-
-  const responsiveClasses = ``;
+  const bgColor = darkmode ? "bg-[#3A3A5A]" : "bg-white";
+  const borderColor = darkmode ? "border-gray-600" : "border-white";
   const hover = "hover:-translate-y-[1px] transition-transform duration-100";
 
   return (
-    <>
-      <div
-        className={`${bgColor} flex-wrap p-3 border-1 ${borderColor} rounded-xl flex justify-center items-center ${responsiveClasses} ${hover}`}
-      >
-        {image}
-      </div>
-    </>
+    <div
+      className={`${bgColor} w-full h-32 p-3 border ${borderColor} rounded-xl flex justify-center items-center overflow-hidden ${hover}`}
+    >
+      {image}
+    </div>
   );
 }

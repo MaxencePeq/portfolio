@@ -49,13 +49,56 @@ function App({ AppIsDarkmode }: AppProps) {
           <Darkbox
             darkmode={darkmode}
             content={
-              <>
-                <p className="text-4xl text-white">Portfolio coming soon...</p>
-                <Lightbox
-                  darkmode={darkmode}
-                  image={<img src="/img/navbar/instagram.png" alt="??" />}
+              <div className="flex flex-row gap-x-14">
+                <img
+                  src="/img/me/mePhoto.png"
+                  className="rounded-xl w-100 h-100 object-cover flex-shrink-0"
                 />
-              </>
+                <div className="flex flex-col flex-1 gap-4 items-center">
+                  <p className="text-white text-[50px] font-semibold">
+                    Maxence Pequeno
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 w-full p-8">
+                    <Lightbox
+                      darkmode={darkmode}
+                      image={
+                        <img
+                          src="../public/img/stacks/laravel.png"
+                          className="p-5"
+                        />
+                      }
+                    />
+                    <Lightbox
+                      darkmode={darkmode}
+                      image={
+                        <img
+                          src="../public/img/stacks/react.webp"
+                          className="p-5"
+                        />
+                      }
+                    />
+                    <Lightbox
+                      darkmode={darkmode}
+                      image={
+                        <img
+                          src="../public/img/stacks/symfony.png"
+                          className="p-5"
+                        />
+                      }
+                    />
+                    <Lightbox
+                      darkmode={darkmode}
+                      image={
+                        <img
+                          src="../public/img/stacks/API.png"
+                          className="p-5"
+                        />
+                      }
+                    />
+                  </div>
+                  <div className="">{/* FUTUR BOUTON */}</div>
+                </div>
+              </div>
             }
           />,
         )}
