@@ -1,15 +1,8 @@
 import { useState } from "react";
 import Navbar from "./component/navbar";
-import Darkbox from "./component/darkbox";
-import Lightbox from "./component/lightbox";
 import { motion } from "framer-motion";
 import SectionHome from "./component/section/SectionHome";
-import { GitHubCalendar } from "react-github-calendar";
-import {
-  getMode,
-  getGitChartTextColor,
-  getLeftBorderColor,
-} from "./utils/infoCalc";
+import SectionGithub from "./component/section/SectionGithub";
 
 type AppProps = {
   AppIsDarkmode: boolean;
@@ -54,33 +47,7 @@ function App({ AppIsDarkmode }: AppProps) {
       <main className="h-screen overflow-y-scroll snap-y snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {section(<SectionHome darkmode={darkmode} />)}
 
-        {section(
-          <Darkbox
-            darkmode={darkmode}
-            content={
-              <div className="flex flex-col gap-y-8">
-                <p
-                  className={`text-4xl text-white border-l-4 pl-4 ${getLeftBorderColor(darkmode)} `}
-                >
-                  Mes contributions hors travail et étude
-                </p>
-                <Lightbox
-                  darkmode={darkmode}
-                  image={
-                    <GitHubCalendar
-                      username="MaxencePeq"
-                      colorScheme={getMode(darkmode)}
-                      year={"last"}
-                      showColorLegend
-                      style={{ color: `${getGitChartTextColor(darkmode)}` }}
-                    />
-                  }
-                  ImageBlockingHeight={false}
-                />
-              </div>
-            }
-          />,
-        )}
+        {section(<SectionGithub darkmode={darkmode} />)}
       </main>
     </div>
   );
