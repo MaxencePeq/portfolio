@@ -24,9 +24,3 @@ function App({ AppIsDarkmode }: AppProps) {
 }
 
 export default App;
-
-/**
- * {section(<SectionHome darkmode={darkmode} />)}
-        {section(<SectionGithub darkmode={darkmode} />)}
-        {section(<SectionPassionButton darkmode={darkmode} />)}
- */

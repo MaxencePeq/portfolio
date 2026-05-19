@@ -18,23 +18,43 @@ export default function SectionGithub({ darkmode }: SectionProps) {
       content={
         <div className="flex flex-col gap-y-8">
           <p
-            className={`text-4xl text-white font-semibold border-l-4 pl-4 ${getLeftBorderColor(darkmode)} `}
+            className={`text-2xl xl:text-4xl text-white font-semibold border-l-4 pl-4 ${getLeftBorderColor(darkmode)} `}
           >
             Mes contributions hors travail et étude
           </p>
-          <Lightbox
-            darkmode={darkmode}
-            image={
-              <GitHubCalendar
-                username="MaxencePeq"
-                colorScheme={getMode(darkmode)}
-                year={"last"}
-                showColorLegend
-                style={{ color: `${getGitChartTextColor(darkmode)}` }}
-              />
-            }
-            ImageBlockingHeight={false}
-          />
+          <div className="max-sm:hidden">
+            <Lightbox
+              darkmode={darkmode}
+              image={
+                <GitHubCalendar
+                  username="MaxencePeq"
+                  colorScheme={getMode(darkmode)}
+                  year={"last"}
+                  showColorLegend
+                  style={{ color: `${getGitChartTextColor(darkmode)}` }}
+                />
+              }
+              ImageBlockingHeight={false}
+            />
+          </div>
+          <div className="sm:hidden">
+            <Lightbox
+              darkmode={darkmode}
+              image={
+                <GitHubCalendar
+                  username="MaxencePeq"
+                  colorScheme={getMode(darkmode)}
+                  year={"last"}
+                  showColorLegend
+                  blockSize={4} /* défaut : 14 */
+                  blockMargin={1} /* défaut : 4 */
+                  fontSize={5}
+                  style={{ color: `${getGitChartTextColor(darkmode)}` }}
+                />
+              }
+              ImageBlockingHeight={false}
+            />
+          </div>
         </div>
       }
     />
