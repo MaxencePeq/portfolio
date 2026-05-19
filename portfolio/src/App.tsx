@@ -3,6 +3,7 @@ import Navbar from "./component/navbar";
 import { motion } from "framer-motion";
 import SectionHome from "./component/section/SectionHome";
 import SectionGithub from "./component/section/SectionGithub";
+import SectionPassionButton from "./component/button/passionButton";
 
 type AppProps = {
   AppIsDarkmode: boolean;
@@ -46,8 +47,8 @@ function App({ AppIsDarkmode }: AppProps) {
 
       <main className="h-screen overflow-y-scroll snap-y snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {section(<SectionHome darkmode={darkmode} />)}
-
         {section(<SectionGithub darkmode={darkmode} />)}
+        {section(<SectionPassionButton darkmode={darkmode} />)}
       </main>
     </div>
   );

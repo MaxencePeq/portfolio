@@ -7,11 +7,11 @@ import {
 import Darkbox from "../darkbox";
 import Lightbox from "../lightbox";
 
-type SectionGithubProps = {
+type SectionProps = {
   darkmode: boolean;
 };
 
-export default function SectionGithub({ darkmode }: SectionGithubProps) {
+export default function SectionGithub({ darkmode }: SectionProps) {
   return (
     <Darkbox
       darkmode={darkmode}
