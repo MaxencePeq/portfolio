@@ -11,7 +11,10 @@ export default function SectionHome({ darkmode }: SectionHomeProps) {
     <Darkbox
       darkmode={darkmode}
       content={
-        <div className="flex flex-col md:flex-row gap-8 md:gap-x-14 items-center">
+        <div
+          className="flex flex-col md:flex-row gap-8 md:gap-x-14 items-center"
+          id="accueil"
+        >
           <img
             src="/img/me/mePhoto.png"
             className="rounded-xl w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 xl:w-100 xl:h-100 object-cover flex-shrink-0"
