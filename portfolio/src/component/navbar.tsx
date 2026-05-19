@@ -27,8 +27,8 @@ export default function Navbar({ darkmode, setDarkmode }: navbarProps) {
         <a href="" className={hover}>
           Réalisations
         </a>
-        <a href="" className={hover}>
-          Autres
+        <a href="#passions" className={hover}>
+          Passions
         </a>
         <a href="" className={hover}>
           CV
