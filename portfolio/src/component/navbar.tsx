@@ -30,7 +30,7 @@ export default function Navbar({ darkmode, setDarkmode }: navbarProps) {
         <a href="/#passions" className={hover}>
           Passions
         </a>
-        <a href="" className={hover}>
+        <a href="/cv" className={hover}>
           CV
         </a>
       </div>

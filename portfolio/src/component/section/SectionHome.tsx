@@ -73,12 +73,14 @@ export default function SectionHome({ darkmode }: SectionHomeProps) {
                 textMobile="CV"
                 dark={true}
                 darkmode={darkmode}
+                to="/cv"
               />
               <DarkButton
                 text="Mon Github"
                 textMobile="Github"
                 dark={false}
                 darkmode={darkmode}
+                to="http://github.com/MaxencePeq"
               />
               <DarkButton
                 text="Me contacter"

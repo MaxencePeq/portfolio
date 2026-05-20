@@ -19,7 +19,7 @@ export default function SectionPassionButton({ darkmode }: SectionProps) {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="group p-6 rounded-lg bg-white/5 hover:bg-white/10 transition">
+            <div className="group p-6 rounded-lg bg-white/5 ">
               <div className="text-5xl mb-3">
                 <img
                   src="/img/illustration/bojangles.jpg"
@@ -33,7 +33,7 @@ export default function SectionPassionButton({ darkmode }: SectionProps) {
               </p>
             </div>
 
-            <div className="group p-6 rounded-lg bg-white/5 hover:bg-white/10 transition">
+            <div className="group p-6 rounded-lg bg-white/5 ">
               <div className="text-5xl mb-3">
                 <img
                   src="/img/illustration/pianist.jpg"
