@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import ComponentPage from "./component/page";
 import SectionHome from "./component/section/SectionHome";
@@ -12,8 +12,22 @@ type RoutesProps = {
   AppIsDarkmode: boolean;
 };
 
+const DARKMODE_STORAGE_KEY = "portfolio-darkmode";
+
 export default function AppRoutes({ AppIsDarkmode }: RoutesProps) {
-  const [darkmode, setDarkmode] = useState(AppIsDarkmode);
+  const [darkmode, setDarkmode] = useState(() => {
+    const savedDarkmode = localStorage.getItem(DARKMODE_STORAGE_KEY);
+
+    if (savedDarkmode === null) {
+      return AppIsDarkmode;
+    }
+
+    return savedDarkmode === "true";
+  });
+
+  useEffect(() => {
+    localStorage.setItem(DARKMODE_STORAGE_KEY, String(darkmode));
+  }, [darkmode]);
 
   return (
     <Routes>
