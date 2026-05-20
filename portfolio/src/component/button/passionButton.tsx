@@ -53,6 +53,7 @@ export default function SectionPassionButton({ darkmode }: SectionProps) {
               darkmode={darkmode}
               text={"Découvrir mes passions →"}
               dark={true}
+              to="/passions"
             />
           </div>
         </div>
