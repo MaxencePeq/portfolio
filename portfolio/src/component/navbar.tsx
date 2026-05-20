@@ -21,13 +21,13 @@ export default function Navbar({ darkmode, setDarkmode }: navbarProps) {
       <div
         className={`${textColor} text-xs sm:text-sm flex flex-row gap-1 sm:gap-6`}
       >
-        <a href="#accueil" className={hover}>
+        <a href="/#accueil" className={hover}>
           Accueil
         </a>
         <a href="" className={hover}>
           Réalisations
         </a>
-        <a href="#passions" className={hover}>
+        <a href="/#passions" className={hover}>
           Passions
         </a>
         <a href="" className={hover}>
