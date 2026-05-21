@@ -62,7 +62,7 @@ export default function Slider({ images, darkmode }: SliderProps) {
                   <img
                     src={img.src}
                     alt={img.title}
-                    className="h-36 sm:h-40 lg:h-42 max-w-full object-contain rounded-lg"
+                    className="h-36 sm:h-40 lg:h-42 lg:w-42 max-w-full lg:max-w-none object-contain rounded-lg"
                   />
                 }
                 booktitle={img.title}
