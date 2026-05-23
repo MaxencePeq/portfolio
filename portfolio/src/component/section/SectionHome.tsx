@@ -87,6 +87,7 @@ export default function SectionHome({ darkmode }: SectionHomeProps) {
                 textMobile="Contact"
                 dark={false}
                 darkmode={darkmode}
+                to="mailto:maxence.pequeno@icloud.com"
               />
             </div>
           </div>
