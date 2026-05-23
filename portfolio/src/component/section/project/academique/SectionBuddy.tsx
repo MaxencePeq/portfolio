@@ -1,4 +1,4 @@
-import Project from "../../project";
+import Project from "../../../project";
 
 type SectionProps = {
   darkmode: boolean;
@@ -54,6 +54,7 @@ export default function SectionBuddy({ darkmode }: SectionProps) {
           </>
         }
         stacks={stack}
+        isFirstInType={true}
       />
     </>
   );

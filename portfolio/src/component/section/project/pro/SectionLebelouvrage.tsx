@@ -1,4 +1,4 @@
-import Project from "../../project";
+import Project from "../../../project";
 
 type SectionProps = {
   darkmode: boolean;
@@ -21,7 +21,7 @@ const stack = [
 
 export default function SectionLebelouvrage({ darkmode }: SectionProps) {
   const underlineColor = darkmode ? "decoration-[#2563EB]" : "decoration-white";
-  return (
+  const content = (
     <>
       <Project
         darkmode={darkmode}
@@ -54,7 +54,9 @@ export default function SectionLebelouvrage({ darkmode }: SectionProps) {
           </>
         }
         stacks={stack}
+        isFirstInType={true}
       />
     </>
   );
+  return content;
 }

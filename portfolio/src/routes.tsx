@@ -8,9 +8,10 @@ import { section } from "./utils/section";
 import SectionPassions from "./component/section/SectionPassions";
 import SectionCv from "./component/section/SectionCV";
 import SectionStack from "./component/section/SectionStack";
-import SectionLebelouvrage from "./component/section/project/SectionLebelouvrage";
-import SectionBuddy from "./component/section/project/SectionBuddy";
-import SectionWFC from "./component/section/project/SectionWFC";
+import SectionBuddy from "./component/section/project/academique/SectionBuddy";
+import SectionWFC from "./component/section/project/perso/SectionWFC";
+import SectionLebelouvrage from "./component/section/project/pro/SectionLebelouvrage";
+import SectionBakerySim from "./component/section/project/perso/SectionBakery-sim";
 
 type RoutesProps = {
   AppIsDarkmode: boolean;
@@ -50,6 +51,7 @@ export default function AppRoutes({ AppIsDarkmode }: RoutesProps) {
                 {section(<SectionLebelouvrage darkmode={darkmode} />)}
                 {section(<SectionBuddy darkmode={darkmode} />)}
                 {section(<SectionWFC darkmode={darkmode} />)}
+                {section(<SectionBakerySim darkmode={darkmode} />)}
               </>
             }
           />

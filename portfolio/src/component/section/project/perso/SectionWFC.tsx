@@ -1,4 +1,4 @@
-import Project from "../../project";
+import Project from "../../../project";
 
 type SectionProps = {
   darkmode: boolean;
@@ -18,7 +18,7 @@ const stack = [
 ];
 
 export default function SectionWFC({ darkmode }: SectionProps) {
-  return (
+  const content = (
     <>
       <Project
         darkmode={darkmode}
@@ -26,7 +26,8 @@ export default function SectionWFC({ darkmode }: SectionProps) {
         images={images}
         title={"Website For Colorblind"}
         year={"2026"}
-        titleLink={""}
+        isLink={true}
+        titleLink={"https://github.com/MaxencePeq/Website-Colorblind-Extension"}
         description={
           <>
             {" "}
@@ -38,7 +39,9 @@ export default function SectionWFC({ darkmode }: SectionProps) {
           </>
         }
         stacks={stack}
+        isFirstInType={true}
       />
     </>
   );
+  return content;
 }

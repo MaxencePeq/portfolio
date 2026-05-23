@@ -30,6 +30,8 @@ export default function Project({
 }: ProjectProps) {
   const underlineColor = darkmode ? "decoration-[#2563EB]" : "decoration-white";
   const TitleColor = darkmode ? "text-[#2563EB]" : "text-white";
+
+  // Const avec le contenu des titres
   const titleContent = isLink ? (
     <a
       href={`${titleLink}`}
@@ -40,6 +42,8 @@ export default function Project({
   ) : (
     <>{title}</>
   );
+
+  // Const avec le contenu du type de projet
   const typeContent = isFirstInType ? (
     <p
       className={`text-2xl sm:text-4xl text-white font-semibold border-l-4 pl-4 mb-3 ${getLeftBorderColor(darkmode)}`}
@@ -48,6 +52,7 @@ export default function Project({
     </p>
   ) : null;
 
+  // Const avec le reste du contenu
   const content = (
     <>
       <Darkbox
