@@ -8,7 +8,6 @@ import { section } from "./utils/section";
 import SectionPassions from "./component/section/SectionPassions";
 import SectionCv from "./component/section/SectionCV";
 import SectionStack from "./component/section/SectionStack";
-import SectionProProject from "./component/section/SectionLebelouvrage";
 import SectionLebelouvrage from "./component/section/SectionLebelouvrage";
 import SectionBuddy from "./component/section/SectionBuddy";
 

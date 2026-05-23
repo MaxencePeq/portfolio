@@ -1,6 +1,7 @@
 import { getLeftBorderColor } from "../utils/infoCalc";
 import Darkbox from "./box/darkbox";
-import Carousel from "./carrousel";
+import Stackbox from "./box/stackbox";
+import Carrousel from "./carrousel";
 
 type ProjectProps = {
   darkmode: boolean;
@@ -10,6 +11,7 @@ type ProjectProps = {
   year: string;
   titleLink: string;
   description: React.ReactNode;
+  stacks: { img: string; title: string }[];
 };
 
 export default function Project({
@@ -20,9 +22,10 @@ export default function Project({
   year,
   titleLink,
   description,
+  stacks,
 }: ProjectProps) {
   const underlineColor = darkmode ? "decoration-[#2563EB]" : "decoration-white";
-  return (
+  const content = (
     <>
       <Darkbox
         darkmode={darkmode}
@@ -33,7 +36,7 @@ export default function Project({
             >
               Réalisations {type}
             </p>
-            <div className="flex flex-col gap-y-3">
+            <div className="flex flex-col lg:gap-y-3">
               <p className="text-2xl text-white text-center font-semibold">
                 {" "}
                 {year}{" "}
@@ -47,11 +50,32 @@ export default function Project({
               <div className="text-sm text-white text-center">
                 {description}
               </div>
-              <Carousel images={images} />
+
+              {/* Carousel */}
+              <Carrousel images={images} />
+
+              {/* Stack */}
+              <div className="flex flex-row gap-x-2 gap-y-2 flex-1 items-center justify-center flex-wrap">
+                {stacks.map((stacks) => (
+                  <Stackbox
+                    key={stacks.title}
+                    darkmode={darkmode}
+                    image={
+                      <img
+                        src={stacks.img}
+                        alt={`${stacks.title}`}
+                        className="h-8 sm:h-10 w-8 sm:w-10 object-contain"
+                      />
+                    }
+                    name={stacks.title}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         }
       />
     </>
   );
+  return content;
 }

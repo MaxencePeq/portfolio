@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
-type CarouselProps = {
+type CarrouselProps = {
   images: string[];
 };
 
-export default function Carousel({ images }: CarouselProps) {
+export default function Carrousel({ images }: CarrouselProps) {
   const [current, setCurrent] = useState(0);
   const [resetTimer, setResetTimer] = useState(0);
 
@@ -42,7 +42,7 @@ export default function Carousel({ images }: CarouselProps) {
             key={i}
             src={img}
             alt={`Slide ${i + 1}`}
-            className="w-full h-120 object-contain flex-shrink-0"
+            className="w-full h-100 object-contain flex-shrink-0"
           />
         ))}
       </div>

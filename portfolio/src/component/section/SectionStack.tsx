@@ -21,6 +21,8 @@ const outils = [
   { img: "/img/stack/git.png", title: "Git" },
   { img: "/img/stack/phpmyadmin.png", title: "phpMyAdmin" },
   { img: "/img/stack/composer.png", title: "Composer" },
+  { img: "/img/stack/tailwind.png", title: "Tailwind CSS" },
+  { img: "/img/stack/bootstrap.png", title: "Bootstrap" },
 ];
 
 const languages = [

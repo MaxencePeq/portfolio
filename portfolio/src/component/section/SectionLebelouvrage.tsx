@@ -11,6 +11,14 @@ const images = [
   "/img/project/pro/lebelouvrage/4.png",
 ];
 
+const stack = [
+  { img: "/img/stack/symfony.png", title: "Symfony" },
+  { img: "/img/stack/js.png", title: "JavaScript" },
+  { img: "/img/stack/twig.png", title: "Twig" },
+  { img: "/img/stack/bootstrap.png", title: "Bootstrap" },
+  { img: "/img/stack/git.png", title: "Git" },
+];
+
 export default function SectionLebelouvrage({ darkmode }: SectionProps) {
   const underlineColor = darkmode ? "decoration-[#2563EB]" : "decoration-white";
   return (
@@ -45,6 +53,7 @@ export default function SectionLebelouvrage({ darkmode }: SectionProps) {
             </p>{" "}
           </>
         }
+        stacks={stack}
       />
     </>
   );
