@@ -42,7 +42,7 @@ export default function SectionBakerySim({ darkmode }: SectionProps) {
         }
         stacks={stack}
         isFirstInType={false}
-        number={8}
+        number={9}
       />
     </>
   );

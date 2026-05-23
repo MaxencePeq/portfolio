@@ -5,16 +5,18 @@ type SectionProps = {
 };
 
 const images = [
-  "/img/project/perso/WFC/1.png",
-  "/img/project/perso/WFC/2.png",
-  "/img/project/perso/WFC/3.png",
-  "/img/project/perso/WFC/4.png",
+  "/img/project/perso/portfolio/1.png",
+  "/img/project/perso/portfolio/2.png",
+  "/img/project/perso/portfolio/3.png",
 ];
 
 const stack = [
-  { img: "/img/stack/js.png", title: "JavaScript" },
-  { img: "/img/stack/html-5.png", title: "HTML" },
-  { img: "/img/stack/css-3.png", title: "CSS" },
+  { img: "/img/stack/react.png", title: "React" },
+  { img: "/img/stack/docker.png", title: "Docker" },
+  { img: "/img/stack/tailwind.png", title: "Tailwind CSS" },
+  { img: "/img/stack/typescript.png", title: "TypeScript" },
+  { img: "/img/stack/jsx.png", title: "JSX" },
+  { img: "/img/stack/git.png", title: "Git" },
 ];
 
 export default function SectionPortfolio({ darkmode }: SectionProps) {
@@ -24,22 +26,22 @@ export default function SectionPortfolio({ darkmode }: SectionProps) {
         darkmode={darkmode}
         type={"personnelles"}
         images={images}
-        title={"Ce portfolio "}
+        title={"Mon portfolio "}
         year={"2026"}
         isLink={true}
-        titleLink={"https://github.com/MaxencePeq/Website-Colorblind-Extension"}
+        titleLink={"https://github.com/MaxencePeq/portfolio"}
         description={
           <>
             {" "}
             <p className="">
-              Est une extension permettant de modifier la couleur de certains
-              paramètres pour permettre aux daltoniens (commme moi) d'adapter la
-              page en cours.
+              Ce joli portfolio en React / Tailwind CSS et Docker pour le
+              développement et la mise en production !
             </p>{" "}
           </>
         }
         stacks={stack}
         isFirstInType={true}
+        number={8}
       />
     </>
   );
