@@ -29,10 +29,11 @@ export default function SectionBuddy({ darkmode }: SectionProps) {
     <>
       <Project
         darkmode={darkmode}
-        type={"académique"}
+        type={"académiques"}
         images={images}
         title={"Buddy System"}
         year={"2026"}
+        isLink={true}
         titleLink={"https://buddysystem.calvin-nogueira.fr/"}
         description={
           <>
@@ -55,6 +56,7 @@ export default function SectionBuddy({ darkmode }: SectionProps) {
         }
         stacks={stack}
         isFirstInType={true}
+        number={6}
       />
     </>
   );

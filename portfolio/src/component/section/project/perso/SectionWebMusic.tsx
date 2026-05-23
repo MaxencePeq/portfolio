@@ -5,19 +5,21 @@ type SectionProps = {
 };
 
 const images = [
-  "/img/project/perso/bakery-sim/intro.png",
-  "/img/project/perso/bakery-sim/full.png",
-  "/img/project/perso/bakery-sim/debug.png",
+  "/img/project/perso/webmusic/index.png",
+  "/img/project/perso/webmusic/album.png",
+  "/img/project/perso/webmusic/album-track.png",
+  "/img/project/perso/webmusic/song.png",
 ];
 
 const stack = [
   { img: "/img/stack/php.png", title: "PHP" },
+  { img: "/img/stack/pdo.png", title: "PDO" },
   { img: "/img/stack/composer.png", title: "Composer" },
   { img: "/img/stack/html-5.png", title: "HTML" },
   { img: "/img/stack/css-3.png", title: "CSS" },
 ];
 
-export default function SectionBakerySim({ darkmode }: SectionProps) {
+export default function SectionWebMusic({ darkmode }: SectionProps) {
   const content = (
     <>
       <Project
@@ -25,24 +27,22 @@ export default function SectionBakerySim({ darkmode }: SectionProps) {
         type={"personnelles"}
         images={images}
         isLink={true}
-        titleLink="https://github.com/MaxencePeq/BakerySimulator"
-        title={"Bakery Simulator"}
-        year={"2025"}
+        titleLink="https://github.com/MaxencePeq/WebMusic"
+        title={"WebMusic"}
+        year={"2024"}
         description={
           <>
             {" "}
             <p className="">
-              Est un simulateur de gestion de boulangerie de type "Idle /
-              Autoclicker" ! Anciennement jouable, le serveur de jeu est
-              désormais fermé. <br />
-              Un debug-mode a été ajouté en plus du système d'inscription pour
-              modérer les comptes.
+              Une petite application web débutante qui répertorie des genres /
+              albums / artistes de musique et créer des liens Youtube
+              automatiquement pour retrouver les musiques.
             </p>{" "}
           </>
         }
         stacks={stack}
         isFirstInType={false}
-        number={8}
+        number={9}
       />
     </>
   );

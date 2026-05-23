@@ -12,6 +12,7 @@ import SectionBuddy from "./component/section/project/academique/SectionBuddy";
 import SectionWFC from "./component/section/project/perso/SectionWFC";
 import SectionLebelouvrage from "./component/section/project/pro/SectionLebelouvrage";
 import SectionBakerySim from "./component/section/project/perso/SectionBakery-sim";
+import SectionWebMusic from "./component/section/project/perso/SectionWebMusic";
 
 type RoutesProps = {
   AppIsDarkmode: boolean;
@@ -44,7 +45,7 @@ export default function AppRoutes({ AppIsDarkmode }: RoutesProps) {
             setDarkmode={setDarkmode}
             content={
               <>
-                {section(<SectionHome darkmode={darkmode} />)}
+                ^{section(<SectionHome darkmode={darkmode} />)}
                 {section(<SectionGithub darkmode={darkmode} />)}
                 {section(<SectionPassionButton darkmode={darkmode} />)}
                 {section(<SectionStack darkmode={darkmode} />)}
@@ -52,6 +53,7 @@ export default function AppRoutes({ AppIsDarkmode }: RoutesProps) {
                 {section(<SectionBuddy darkmode={darkmode} />)}
                 {section(<SectionWFC darkmode={darkmode} />)}
                 {section(<SectionBakerySim darkmode={darkmode} />)}
+                {section(<SectionWebMusic darkmode={darkmode} />)}
               </>
             }
           />

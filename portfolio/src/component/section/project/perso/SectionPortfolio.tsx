@@ -17,14 +17,14 @@ const stack = [
   { img: "/img/stack/css-3.png", title: "CSS" },
 ];
 
-export default function SectionWFC({ darkmode }: SectionProps) {
+export default function SectionPortfolio({ darkmode }: SectionProps) {
   const content = (
     <>
       <Project
         darkmode={darkmode}
         type={"personnelles"}
         images={images}
-        title={"Website For Colorblind"}
+        title={"Ce portfolio "}
         year={"2026"}
         isLink={true}
         titleLink={"https://github.com/MaxencePeq/Website-Colorblind-Extension"}
@@ -40,7 +40,6 @@ export default function SectionWFC({ darkmode }: SectionProps) {
         }
         stacks={stack}
         isFirstInType={true}
-        number={7}
       />
     </>
   );

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navbar from "./navbar";
 
 type AppProps = {
@@ -8,6 +9,19 @@ type AppProps = {
 
 function ComponentPage({ darkmode, setDarkmode, content }: AppProps) {
   const bgColor = darkmode ? "bg-[#181E37]" : "bg-[#FEFEFE]";
+
+  useEffect(() => {
+    document.title = "Portfolio Maxence";
+
+    let link: HTMLLinkElement | null =
+      document.querySelector("link[rel~='icon']");
+    if (!link) {
+      link = document.createElement("link");
+      link.rel = "icon";
+      document.head.appendChild(link);
+    }
+    link.href = "/img/me/mePhoto.png";
+  }, []);
 
   return (
     <div className={`${bgColor} h-screen`}>

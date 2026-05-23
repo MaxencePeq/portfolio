@@ -25,10 +25,11 @@ export default function SectionLebelouvrage({ darkmode }: SectionProps) {
     <>
       <Project
         darkmode={darkmode}
-        type={"professionnel"}
+        type={"professionnelles"}
         images={images}
         title={"Lebel Ouvrage"}
         year={"2026"}
+        isLink={true}
         titleLink={"https://lebelouvrage.bzh"}
         description={
           <>
@@ -55,6 +56,7 @@ export default function SectionLebelouvrage({ darkmode }: SectionProps) {
         }
         stacks={stack}
         isFirstInType={true}
+        number={5}
       />
     </>
   );

@@ -5,8 +5,9 @@ import Carrousel from "./carrousel";
 
 type ProjectProps = {
   darkmode: boolean;
+  number: number;
   isFirstInType: boolean;
-  type?: "professionnel" | "personnel" | "académique";
+  type?: "professionnelles" | "personnelles" | "académiques";
   images: string[];
   title: string;
   year: string;
@@ -18,6 +19,7 @@ type ProjectProps = {
 
 export default function Project({
   darkmode,
+  number,
   isFirstInType,
   type,
   images,
@@ -56,6 +58,7 @@ export default function Project({
   const content = (
     <>
       <Darkbox
+        number={number}
         darkmode={darkmode}
         content={
           <div className="flex flex-col gap-y-11">
