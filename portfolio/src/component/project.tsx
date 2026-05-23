@@ -5,47 +5,60 @@ import Carrousel from "./carrousel";
 
 type ProjectProps = {
   darkmode: boolean;
-  type: "professionnel" | "personnel" | "académique";
+  isFirstInType: boolean;
+  type?: "professionnel" | "personnel" | "académique";
   images: string[];
   title: string;
   year: string;
-  titleLink: string;
+  isLink?: boolean;
+  titleLink?: string;
   description: React.ReactNode;
   stacks: { img: string; title: string }[];
 };
 
 export default function Project({
   darkmode,
+  isFirstInType,
   type,
   images,
   title,
   year,
+  isLink,
   titleLink,
   description,
   stacks,
 }: ProjectProps) {
   const underlineColor = darkmode ? "decoration-[#2563EB]" : "decoration-white";
+  const TitleColor = darkmode ? "text-[#2563EB]" : "text-white";
+  const titleContent = isLink ? (
+    <a
+      href={`${titleLink}`}
+      className={`underline ${underlineColor} decoration-2 ${TitleColor} font-bold`}
+    >
+      {title}
+    </a>
+  ) : (
+    <>{title}</>
+  );
+  const typeContent = isFirstInType ? (
+    <p
+      className={`text-2xl sm:text-4xl text-white font-semibold border-l-4 pl-4 mb-3 ${getLeftBorderColor(darkmode)}`}
+    >
+      Réalisations {type}
+    </p>
+  ) : null;
+
   const content = (
     <>
       <Darkbox
         darkmode={darkmode}
         content={
           <div className="flex flex-col gap-y-11">
-            <p
-              className={`text-2xl sm:text-4xl text-white font-semibold border-l-4 pl-4 mb-3 ${getLeftBorderColor(darkmode)}`}
-            >
-              Réalisations {type}
-            </p>
+            {typeContent}
             <div className="flex flex-col lg:gap-y-3">
               <p className="text-2xl text-white text-center font-semibold">
                 {" "}
-                {year}{" "}
-                <a
-                  href={`${titleLink}`}
-                  className={`underline ${underlineColor} decoration-2`}
-                >
-                  {title}
-                </a>
+                {year} {titleContent}{" "}
               </p>
               <div className="text-sm text-white text-center">
                 {description}
