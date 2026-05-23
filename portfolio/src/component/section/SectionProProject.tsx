@@ -17,7 +17,7 @@ export default function SectionProProject({ darkmode }: SectionProps) {
     <>
       <Project
         darkmode={darkmode}
-        pro={true}
+        type={"professionnel"}
         images={images}
         title={"Lebel Ouvrage"}
         year={"2026"}
@@ -25,7 +25,7 @@ export default function SectionProProject({ darkmode }: SectionProps) {
         description={
           <>
             {" "}
-            <p className="">
+            <p className="" id="realisation">
               Est un site vitrine pour un artisan fait en collaboration avec mon
               collègue{" "}
               <a

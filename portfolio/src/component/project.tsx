@@ -4,7 +4,7 @@ import Carousel from "./carrousel";
 
 type ProjectProps = {
   darkmode: boolean;
-  pro: boolean;
+  type: "professionnel" | "personnel" | "académique";
   images: string[];
   title: string;
   year: string;
@@ -14,14 +14,13 @@ type ProjectProps = {
 
 export default function Project({
   darkmode,
-  pro,
+  type,
   images,
   title,
   year,
   titleLink,
   description,
 }: ProjectProps) {
-  const real = pro ? "professionels" : "personnels";
   const underlineColor = darkmode ? "decoration-[#2563EB]" : "decoration-white";
   return (
     <>
@@ -32,7 +31,7 @@ export default function Project({
             <p
               className={`text-2xl sm:text-4xl text-white font-semibold border-l-4 pl-4 mb-3 ${getLeftBorderColor(darkmode)}`}
             >
-              Réalisations {real}
+              Réalisations {type}
             </p>
             <div className="flex flex-col gap-y-3">
               <p className="text-2xl text-white text-center font-semibold">
