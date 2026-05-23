@@ -11,7 +11,7 @@ const images = [
   "/img/project/pro/lebelouvrage/4.png",
 ];
 
-export default function SectionProProject({ darkmode }: SectionProps) {
+export default function SectionLebelouvrage({ darkmode }: SectionProps) {
   const underlineColor = darkmode ? "decoration-[#2563EB]" : "decoration-white";
   return (
     <>
