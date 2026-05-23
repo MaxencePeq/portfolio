@@ -7,6 +7,7 @@ import SectionPassionButton from "./component/button/passionButton";
 import { section } from "./utils/section";
 import SectionPassions from "./component/section/SectionPassions";
 import SectionCv from "./component/section/SectionCV";
+import SectionStack from "./component/section/SectionStack";
 
 type RoutesProps = {
   AppIsDarkmode: boolean;
@@ -42,6 +43,7 @@ export default function AppRoutes({ AppIsDarkmode }: RoutesProps) {
                 {section(<SectionHome darkmode={darkmode} />)}
                 {section(<SectionGithub darkmode={darkmode} />)}
                 {section(<SectionPassionButton darkmode={darkmode} />)}
+                {section(<SectionStack darkmode={darkmode} />)}
               </>
             }
           />

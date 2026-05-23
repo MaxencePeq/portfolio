@@ -13,7 +13,7 @@ export default function SectionPassionButton({ darkmode }: SectionProps) {
       content={
         <div className="flex flex-col gap-y-10" id="passions">
           <p
-            className={`text-4xl text-white border-l-4 pl-4 ${getLeftBorderColor(darkmode)}`}
+            className={`text-4xl text-white font-semibold border-l-4 pl-4 ${getLeftBorderColor(darkmode)}`}
           >
             En dehors du code...
           </p>
