@@ -61,7 +61,7 @@ export default function Project({
         number={number}
         darkmode={darkmode}
         content={
-          <div className="flex flex-col gap-y-11">
+          <div className="flex flex-col gap-y-4">
             {typeContent}
             <div className="flex flex-col gap-y-3">
               <p className="text-2xl text-white text-center font-semibold">

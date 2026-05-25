@@ -32,7 +32,7 @@ export default function Carrousel({ images }: CarrouselProps) {
   }, [resetTimer, images.length]);
 
   return (
-    <div className="relative w-full max-w-[1100px] mx-auto overflow-hidden rounded-lg">
+    <div className="relative w-full max-w-[700px] mx-auto overflow-hidden rounded-lg">
       <div
         className="flex transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${current * 100}%)` }}
