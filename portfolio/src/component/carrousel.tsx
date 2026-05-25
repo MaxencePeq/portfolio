@@ -42,7 +42,7 @@ export default function Carrousel({ images }: CarrouselProps) {
             key={i}
             src={img}
             alt={`Slide ${i + 1}`}
-            className="w-full h-100 object-contain flex-shrink-0"
+            className="w-full h-auto max-h-[300px] lg:max-h-[500px] object-contain flex-shrink-0"
           />
         ))}
       </div>
