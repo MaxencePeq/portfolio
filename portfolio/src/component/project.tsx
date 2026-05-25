@@ -63,7 +63,7 @@ export default function Project({
         content={
           <div className="flex flex-col gap-y-11">
             {typeContent}
-            <div className="flex flex-col lg:gap-y-3">
+            <div className="flex flex-col gap-y-3">
               <p className="text-2xl text-white text-center font-semibold">
                 {" "}
                 {year} {titleContent}{" "}
