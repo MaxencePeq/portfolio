@@ -6,7 +6,7 @@ type navbarProps = {
 export default function Navbar({ darkmode, setDarkmode }: navbarProps) {
   const bgColor = darkmode ? "bg-[#2D2D44]" : "bg-[#FEFEFE]";
   const titleColor = "text-[#2563EB]";
-  const textColor = "text-gray-600";
+  const textColor = darkmode ? "text-white" : "text-[#2563EB]";
 
   const hover = darkmode
     ? "hover:rounded-lg hover:bg-[#424257] hover:text-gray-800 p-1 sm:p-2"
@@ -19,7 +19,7 @@ export default function Navbar({ darkmode, setDarkmode }: navbarProps) {
       <p className={`${titleColor} font-bold text-lg sm:text-xl`}>MP</p>
 
       <div
-        className={`${textColor} text-xs sm:text-sm flex flex-row gap-1 sm:gap-6`}
+        className={`${textColor} font-semibold text-xs sm:text-sm flex flex-row gap-1 sm:gap-6`}
       >
         <a href="/#accueil" className={hover}>
           Accueil
@@ -35,7 +35,7 @@ export default function Navbar({ darkmode, setDarkmode }: navbarProps) {
         </a>
       </div>
 
-      <div className="flex flex-row gap-2 sm:gap-4 items-center">
+      <div className="flex flex-row gap-2 sm:gap-6 items-center">
         <a href="https://github.com/MaxencePeq">
           <img
             src="/img/navbar/githubIcon.png"
