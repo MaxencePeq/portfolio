@@ -34,13 +34,10 @@ export default function Navbar({ darkmode, setDarkmode }: navbarProps) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const scroller = document.querySelector("main");
-    if (!scroller) return;
-
-    const onScroll = () => setScrolled(scroller.scrollTop > 8);
+    const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
-    scroller.addEventListener("scroll", onScroll, { passive: true });
-    return () => scroller.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   // bg-bg/60 =
