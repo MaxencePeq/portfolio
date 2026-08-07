@@ -42,7 +42,6 @@ export default function SectionWebMusic({ darkmode }: SectionProps) {
         }
         stacks={stack}
         isFirstInType={false}
-        number={10}
       />
     </>
   );

@@ -41,7 +41,6 @@ export default function SectionPortfolio({ darkmode }: SectionProps) {
         }
         stacks={stack}
         isFirstInType={true}
-        number={8}
       />
     </>
   );
