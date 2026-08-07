@@ -11,7 +11,7 @@ const fadeUp = {
  * @returns
  */
 export const section = (content: React.ReactNode) => (
-  <section className="snap-start min-h-screen flex flex-col items-center justify-center pt-20 pb-8 px-4 sm:px-6 lg:px-8 overflow-x-hidden">
+  <section className="min-h-screen flex flex-col items-center justify-center pt-20 pb-8 px-4 sm:px-6 lg:px-8 overflow-x-hidden">
     <motion.div
       className="w-full max-w-full min-w-0"
       variants={fadeUp}

@@ -24,14 +24,12 @@ function ComponentPage({ darkmode, setDarkmode, content }: AppProps) {
   }, []);
 
   return (
-    <div className={`${bgColor} h-screen`}>
+    <div className={`${bgColor} min-h-screen`}>
       <div className="fixed top-0 left-0 w-full z-50">
         <Navbar darkmode={darkmode} setDarkmode={setDarkmode} />
       </div>
 
-      <main className="h-screen overflow-y-scroll snap-y snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-        {content}
-      </main>
+      <main>{content}</main>
     </div>
   );
 }
