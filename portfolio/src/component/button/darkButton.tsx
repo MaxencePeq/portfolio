@@ -1,5 +1,4 @@
 type buttonProps = {
-  darkmode: boolean;
   text: string;
   textMobile?: string;
   dark: boolean;
@@ -7,26 +6,20 @@ type buttonProps = {
 };
 
 export default function darkButton({
-  darkmode,
   text,
   dark,
   to,
   textMobile,
 }: buttonProps) {
-  let backgroundColor = dark ? "bg-[#4DA6FF]" : "bg-[#3A3A5A]";
-  let textColor = "text-white";
-  let borderColor = dark ? "border-[#BFF0FB]" : "border-[#61617B]";
+  // dark : bg-accent + text-accent-contrast / sinon : border-line + text-text
+  let backgroundColor = "bg-accent";
+  let textColor = "text-accent-contrast";
+  let borderColor = "border-accent";
 
-  if (!darkmode) {
-    if (dark) {
-      backgroundColor = "bg-white";
-      textColor = "text-[#2563EB]";
-      borderColor = "border-white";
-    } else {
-      backgroundColor = "bg-transparent hover:bg-white/10";
-      textColor = "text-white";
-      borderColor = "border-white/70";
-    }
+  if (!dark) {
+    backgroundColor = "bg-transparent hover:bg-surface";
+    textColor = "text-text";
+    borderColor = "border-line";
   }
 
   const hover = "hover:-translate-y-[2px] transition-all duration-200";
@@ -35,7 +28,7 @@ export default function darkButton({
     <div className={hover}>
       <a
         href={to}
-        className={`shadow-sm ${backgroundColor} ${textColor} font-semibold border ${borderColor} rounded-lg cursor-pointer text-lg py-2 px-4 inline-block`}
+        className={`${backgroundColor} ${textColor} font-semibold border ${borderColor} rounded-lg cursor-pointer text-base py-3 px-6 inline-block`}
       >
         {textMobile ? (
           <>
