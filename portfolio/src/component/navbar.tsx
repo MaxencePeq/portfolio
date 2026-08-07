@@ -45,7 +45,7 @@ export default function Navbar({ darkmode, setDarkmode }: navbarProps) {
 
   // bg-bg/60 =
   const glass = scrolled
-    ? "border-line bg-bg/60 backdrop-blur-xl backdrop-saturate-150"
+    ? "border-line bg-bg/60 backdrop-blur-lg backdrop-saturate-150"
     : "border-transparent";
 
   return (

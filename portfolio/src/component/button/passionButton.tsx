@@ -50,7 +50,6 @@ export default function SectionPassionButton({ darkmode }: SectionProps) {
 
           <div className="flex items-center justify-center">
             <DarkButton
-              darkmode={darkmode}
               text={"Découvrir mes passions →"}
               dark={true}
               to="/passions"
