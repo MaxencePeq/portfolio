@@ -1,3 +1,103 @@
-/* ROOT CSS  
+/* ROOT CSS
 */
 @import "tailwindcss";
+
+/* Dark mode piloté par la classe .dark sur <html> (posée dans routes.tsx),
+   pas par prefers-color-scheme : il y a un toggle manuel persisté. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* --- Tokens couleurs ------------------------------------------------------
+   Utilisables en Tailwind : bg-surface, text-muted, border-line,
+   text-accent-text, bg-accent... Le swap clair/sombre est automatique. */
+:root {
+  --bg: #f6f8fc;
+  --surface: #ffffff;
+  --surface-2: #f1f4fa;
+  --line: #e3e8f2;
+  --text: #0f1730;
+  --muted: #59637f;
+  --accent: #1d4ed8;
+  --accent-text: #1d4ed8;
+  --accent-contrast: #ffffff;
+}
+
+.dark {
+  --bg: #181e37;
+  --surface: #232b47;
+  --surface-2: #2c365a;
+  --line: #333f66;
+  --text: #e9edf7;
+  --muted: #9aa6c6;
+  --accent: #2563eb;
+  --accent-text: #6fb4ff;
+  --accent-contrast: #ffffff;
+}
+
+/* `inline` est obligatoire : sans lui Tailwind résout var(--bg) une seule fois
+   sur :root et l'override .dark n'atteint jamais les descendants. */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-text: var(--accent-text);
+  --color-accent-contrast: var(--accent-contrast);
+
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: var(--accent-contrast);
+  }
+}
+
+/* --- Échelle typographique ------------------------------------------------
+   Le display ne sert QUE pour le nom et les titres de section. */
+@utility type-hero {
+  font-family: var(--font-display);
+  font-size: clamp(3.25rem, 11vw, 8rem);
+  font-weight: 700;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+}
+
+@utility type-section {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+@utility type-card {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+@utility type-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+@utility type-body {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
