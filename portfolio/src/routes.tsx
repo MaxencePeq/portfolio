@@ -34,6 +34,8 @@ export default function AppRoutes({ AppIsDarkmode }: RoutesProps) {
 
   useEffect(() => {
     localStorage.setItem(DARKMODE_STORAGE_KEY, String(darkmode));
+    // sans cette classe, les tokens .dark de index.css ne s'appliquent jamais
+    document.documentElement.classList.toggle("dark", darkmode);
   }, [darkmode]);
 
   return (

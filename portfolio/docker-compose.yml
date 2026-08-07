@@ -1,18 +1,11 @@
-version: "3.8"
+name: thisportfolio
 
 services:
   dev:
     build: .
     ports:
-      - "5173:5173"
+      # 5173 côté hôte est pris par l'autre portfolio
+      - "5174:5173"
     volumes:
       - .:/app
       - /app/node_modules
-    environment:
-      - VITE_HOST=0.0.0.0
-    networks:
-      - app-network
-
-networks:
-  app-network:
-    driver: bridge
