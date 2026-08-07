@@ -56,7 +56,6 @@ export default function SectionBuddy({ darkmode }: SectionProps) {
         }
         stacks={stack}
         isFirstInType={true}
-        number={6}
       />
     </>
   );

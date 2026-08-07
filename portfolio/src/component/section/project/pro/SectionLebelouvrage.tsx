@@ -56,7 +56,6 @@ export default function SectionLebelouvrage({ darkmode }: SectionProps) {
         }
         stacks={stack}
         isFirstInType={true}
-        number={5}
       />
     </>
   );

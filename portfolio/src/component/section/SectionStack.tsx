@@ -117,7 +117,6 @@ export default function SectionStack({ darkmode }: SectionProps) {
           </div>
         </div>
       }
-      number={4}
     />
   );
 }

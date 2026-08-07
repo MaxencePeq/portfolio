@@ -41,7 +41,6 @@ export default function SectionWFC({ darkmode }: SectionProps) {
         }
         stacks={stack}
         isFirstInType={true}
-        number={7}
       />
     </>
   );

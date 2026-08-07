@@ -57,7 +57,6 @@ export default function SectionGithub({ darkmode }: SectionProps) {
           </div>
         </div>
       }
-      number={2}
     />
   );
 }
