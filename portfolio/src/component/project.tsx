@@ -10,6 +10,7 @@ type ProjectProps = {
   year: string;
   isLink?: boolean;
   titleLink?: string;
+  bigTitle?: boolean;
   description: React.ReactNode;
   stacks: { img: string; title: string }[];
 };
@@ -21,10 +22,18 @@ export default function Project({
   year,
   isLink,
   titleLink,
+  bigTitle,
   description,
   stacks,
 }: ProjectProps) {
-  // Const avec le contenu des titres -> type-section + text-text, flèche en text-accent-text
+  // Taille du titre -> type-section si bigTitle, sinon type-card
+  let titleSize = "type-card";
+
+  if (bigTitle) {
+    titleSize = "type-section";
+  }
+
+  // Const avec le contenu des titres -> text-text, flèche en text-accent-text
   const titleContent = isLink ? (
     <a href={`${titleLink}`} className="hover:text-accent-text">
       {title} <span className="text-accent-text">↗</span>
@@ -53,7 +62,7 @@ export default function Project({
         {/* Header avec année + type du projet */}
         {header}
 
-        <p className="type-section text-text">{titleContent}</p>
+        <p className={`${titleSize} text-text`}>{titleContent}</p>
 
         <div className="type-body text-muted">{description}</div>
 

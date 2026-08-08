@@ -34,9 +34,9 @@ export default function SectionWebMusic({ darkmode }: SectionProps) {
           <>
             {" "}
             <p className="">
-              Une petite application web débutante qui répertorie des genres /
-              albums / artistes de musique et créer des liens Youtube
-              automatiquement pour retrouver les musiques.
+              Répertoire de genres, albums et artistes, avec génération
+              automatique des liens YouTube vers les morceaux. Un de mes
+              premiers projets.
             </p>{" "}
           </>
         }

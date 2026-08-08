@@ -31,6 +31,7 @@ export default function SectionLebelouvrage({ darkmode }: SectionProps) {
         year={"2026"}
         isLink={true}
         titleLink={"https://lebelouvrage.bzh"}
+        bigTitle={true}
         description={
           <>
             {" "}

@@ -24,7 +24,6 @@ const stack = [
 ];
 
 export default function SectionBuddy({ darkmode }: SectionProps) {
-  const underlineColor = darkmode ? "decoration-[#2563EB]" : "decoration-white";
   return (
     <>
       <Project
@@ -39,18 +38,9 @@ export default function SectionBuddy({ darkmode }: SectionProps) {
           <>
             {" "}
             <p className="">
-              Un projet universitaire de réseau social étudiant. Les membres
-              inscrits peuvent chatter, ajouter des amies <br />
-              Créer des événements, modifier leur profil, rejoindre des groupes
-              et plus encore. N'hésitez pas à vous inscrire !
-              <br />
-              Lien :{" "}
-              <a
-                href="https://buddysystem.calvin-nogueira.fr/"
-                className={`underline decoration-2 ${underlineColor}`}
-              >
-                buddysystem.calvin-nogueira.fr
-              </a>{" "}
+              Réseau social étudiant : messagerie, amis, groupes, événements et
+              profils. Projet universitaire, ouvert à l'inscription.
+              <br />{" "}
             </p>{" "}
           </>
         }
