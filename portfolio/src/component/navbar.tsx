@@ -6,9 +6,9 @@ type navbarProps = {
 };
 
 const links = [
-  { label: "Projets", to: "#projets" },
-  { label: "Stack", to: "#stack" },
-  { label: "Passions", to: "#passions" },
+  { label: "Projets", to: "/#projets" },
+  { label: "Stack", to: "/#stack" },
+  { label: "Passions", to: "/#passions" },
   { label: "CV", to: "/cv" },
 ];
 

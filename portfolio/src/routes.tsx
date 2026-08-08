@@ -48,8 +48,8 @@ export default function AppRoutes({ AppIsDarkmode }: RoutesProps) {
             setDarkmode={setDarkmode}
             content={
               <>
-                {section(<SectionHome darkmode={darkmode} />)}
-                {section(<SectionLebelouvrage darkmode={darkmode} />)}
+                {section(<SectionHome darkmode={darkmode} />, "accueil")}
+                {section(<SectionLebelouvrage darkmode={darkmode} />, "projets")}
                 {section(
                   <div className="w-full max-w-275 min-w-0 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <SectionBuddy darkmode={darkmode} />
@@ -59,9 +59,9 @@ export default function AppRoutes({ AppIsDarkmode }: RoutesProps) {
                     <SectionWebMusic darkmode={darkmode} />
                   </div>,
                 )}
-                {section(<SectionStack darkmode={darkmode} />)}
+                {section(<SectionStack darkmode={darkmode} />, "stack")}
                 {section(<SectionGithub darkmode={darkmode} />)}
-                {section(<SectionPassionButton darkmode={darkmode} />)}
+                {section(<SectionPassionButton darkmode={darkmode} />, "passions")}
               </>
             }
           />
