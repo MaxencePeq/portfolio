@@ -33,19 +33,15 @@ const images = [
 ];
 
 export default function SectionPassions({ darkmode }: SectionProps) {
-  const textColor = darkmode ? "text-[#E0E0E0]" : "text-white";
-  const textClasse = `${textColor} text-lg`;
+  // titre en type-section + text-text, paragraphes en type-body + text-muted
+  const textClasse = "type-body text-muted";
   return (
     <div className="flex w-full min-w-0 flex-col gap-y-4">
       <Darkbox
         darkmode={darkmode}
         content={
           <div className="flex min-w-0 flex-col gap-6">
-            <p
-              className={`${textColor} text-2xl sm:text-3xl font-semibold text-center`}
-            >
-              Mes Passions
-            </p>
+            <p className="type-section text-text">Mes Passions</p>
             <div className="flex flex-col gap-4 mt-4">
               <p className={`${textClasse}`}>
                 {" "}
