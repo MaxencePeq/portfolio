@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 type buttonProps = {
   text: string;
   textMobile?: string;
@@ -23,22 +25,31 @@ export default function darkButton({
   }
 
   const hover = "hover:-translate-y-[2px] transition-all duration-200";
+  const style = `${backgroundColor} ${textColor} font-semibold border ${borderColor} rounded-lg cursor-pointer text-base py-3 px-6 inline-block`;
+
+  const label = textMobile ? (
+    <>
+      <span className="sm:hidden">{textMobile}</span>
+      <span className="hidden sm:inline">{text}</span>
+    </>
+  ) : (
+    text
+  );
+
+  // route interne -> Link (SPA) ; mailto/http -> <a> classique
+  const internal = to?.startsWith("/") && !to.startsWith("//");
 
   return (
     <div className={hover}>
-      <a
-        href={to}
-        className={`${backgroundColor} ${textColor} font-semibold border ${borderColor} rounded-lg cursor-pointer text-base py-3 px-6 inline-block`}
-      >
-        {textMobile ? (
-          <>
-            <span className="sm:hidden">{textMobile}</span>
-            <span className="hidden sm:inline">{text}</span>
-          </>
-        ) : (
-          text
-        )}
-      </a>
+      {internal ? (
+        <Link to={to!} className={style}>
+          {label}
+        </Link>
+      ) : (
+        <a href={to} className={style}>
+          {label}
+        </a>
+      )}
     </div>
   );
 }
