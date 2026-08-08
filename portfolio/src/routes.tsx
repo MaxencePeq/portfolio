@@ -50,14 +50,18 @@ export default function AppRoutes({ AppIsDarkmode }: RoutesProps) {
               <>
                 {section(<SectionHome darkmode={darkmode} />)}
                 {section(<SectionLebelouvrage darkmode={darkmode} />)}
+                {section(
+                  <div className="w-full max-w-275 min-w-0 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <SectionBuddy darkmode={darkmode} />
+                    <SectionWFC darkmode={darkmode} />
+                    <SectionPortfolio darkmode={darkmode} />
+                    <SectionBakerySim darkmode={darkmode} />
+                    <SectionWebMusic darkmode={darkmode} />
+                  </div>,
+                )}
                 {section(<SectionGithub darkmode={darkmode} />)}
                 {section(<SectionPassionButton darkmode={darkmode} />)}
                 {section(<SectionStack darkmode={darkmode} />)}
-                {section(<SectionBuddy darkmode={darkmode} />)}
-                {section(<SectionWFC darkmode={darkmode} />)}
-                {section(<SectionPortfolio darkmode={darkmode} />)}
-                {section(<SectionBakerySim darkmode={darkmode} />)}
-                {section(<SectionWebMusic darkmode={darkmode} />)}
               </>
             }
           />
