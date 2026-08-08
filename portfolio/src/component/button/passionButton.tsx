@@ -1,4 +1,4 @@
-import { getLeftBorderColor } from "../../utils/infoCalc";
+import SectionTitle from "../sectionTitle";
 import Darkbox from "../box/darkbox";
 import DarkButton from "./darkButton";
 
@@ -12,14 +12,10 @@ export default function SectionPassionButton({ darkmode }: SectionProps) {
       darkmode={darkmode}
       content={
         <div className="flex flex-col gap-y-10" id="passions">
-          <p
-            className={`text-2xl lg:text-4xl text-white font-semibold border-l-4 pl-4 ${getLeftBorderColor(darkmode)}`}
-          >
-            En dehors du code...
-          </p>
+          <SectionTitle text="Activité hors de l'école" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="group p-6 rounded-lg bg-white/5 ">
+            <div className="group p-6 rounded-2xl bg-surface border border-line">
               <div className="text-5xl mb-3">
                 <img
                   src="/img/illustration/bojangles.jpg"
@@ -27,13 +23,13 @@ export default function SectionPassionButton({ darkmode }: SectionProps) {
                   className="lg:w-auto lg:max-h-50 max-h-20"
                 />
               </div>
-              <p className="text-white text-2xl font-light">Littérature</p>
-              <p className="text-white/50 text-sm mt-2 italic">
+              <p className="text-text text-2xl font-light">Littérature</p>
+              <p className="text-muted text-sm mt-2 italic">
                 Bourdeaut · Danielewski · Tolkien, Jaworski...
               </p>
             </div>
 
-            <div className="group p-6 rounded-lg bg-white/5 ">
+            <div className="group p-6 rounded-2xl bg-surface border border-line">
               <div className="text-5xl mb-3">
                 <img
                   src="/img/illustration/pianist.jpg"
@@ -41,8 +37,8 @@ export default function SectionPassionButton({ darkmode }: SectionProps) {
                   className="lg:w-auto lg:max-h-50 max-h-20"
                 />
               </div>
-              <p className="text-white text-2xl font-light">Piano</p>
-              <p className="text-white/50 text-sm mt-2 italic">
+              <p className="text-text text-2xl font-light">Piano</p>
+              <p className="text-muted text-sm mt-2 italic">
                 Chopin · Testard · Hisaichi...
               </p>
             </div>

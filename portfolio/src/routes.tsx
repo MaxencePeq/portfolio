@@ -59,9 +59,9 @@ export default function AppRoutes({ AppIsDarkmode }: RoutesProps) {
                     <SectionWebMusic darkmode={darkmode} />
                   </div>,
                 )}
+                {section(<SectionStack darkmode={darkmode} />)}
                 {section(<SectionGithub darkmode={darkmode} />)}
                 {section(<SectionPassionButton darkmode={darkmode} />)}
-                {section(<SectionStack darkmode={darkmode} />)}
               </>
             }
           />

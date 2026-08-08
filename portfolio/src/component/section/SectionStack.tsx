@@ -1,4 +1,4 @@
-import { getLeftBorderColor } from "../../utils/infoCalc";
+import SectionTitle from "../sectionTitle";
 import Darkbox from "../box/darkbox";
 import Stackbox from "../box/stackbox";
 
@@ -44,14 +44,10 @@ export default function SectionStack({ darkmode }: SectionProps) {
       darkmode={darkmode}
       content={
         <div className="flex flex-col gap-y-4">
-          <p
-            className={`text-2xl sm:text-3xl text-white font-semibold border-l-4 pl-4 mb-3 ${getLeftBorderColor(darkmode)}`}
-          >
-            Technologie & Stack
-          </p>
+          <SectionTitle text="Compétences" />
 
           <div className="flex flex-col gap-y-2">
-            <p className={`text-white font-semibold text-sm sm:text-base`}>
+            <p className={`text-text font-semibold text-sm sm:text-base`}>
               Frameworks
             </p>
             <div className="flex flex-wrap gap-2 justify-start">
@@ -73,7 +69,7 @@ export default function SectionStack({ darkmode }: SectionProps) {
           </div>
 
           <div className="flex flex-col gap-y-2">
-            <p className={`text-white font-semibold text-sm sm:text-base`}>
+            <p className={`text-text font-semibold text-sm sm:text-base`}>
               Outils & Technologies
             </p>
             <div className="flex flex-wrap gap-2 justify-start">
@@ -95,7 +91,7 @@ export default function SectionStack({ darkmode }: SectionProps) {
           </div>
 
           <div className="flex flex-col gap-y-2">
-            <p className={`text-white font-semibold text-sm sm:text-base`}>
+            <p className={`text-text font-semibold text-sm sm:text-base`}>
               Langages
             </p>
             <div className="flex flex-wrap gap-2 justify-start">

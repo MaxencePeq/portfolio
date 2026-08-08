@@ -5,12 +5,10 @@ type LightboxProps = {
 };
 
 export default function Lightbox({
-  darkmode,
   image,
   ImageBlockingHeight,
 }: LightboxProps) {
-  const bgColor = darkmode ? "bg-[#3A3A5A]" : "bg-white";
-  const borderColor = darkmode ? "border-gray-600" : "border-white";
+  // bg-surface + border-line
   const hover = "hover:-translate-y-[2px] transition-transform duration-200";
 
   let h;
@@ -19,7 +17,7 @@ export default function Lightbox({
   }
   return (
     <div
-      className={`${bgColor} w-full ${h} p-3 border ${borderColor} rounded-xl flex justify-center items-center overflow-hidden ${hover}`}
+      className={`bg-surface w-full ${h} p-3 border border-line rounded-xl flex justify-center items-center overflow-hidden ${hover}`}
     >
       {image}
     </div>
