@@ -32,10 +32,9 @@ export default function SectionWFC({ darkmode }: SectionProps) {
           <>
             {" "}
             <p className="">
-              Est une extension permettant de modifier la couleur de certains
-              paramètres pour permettre aux daltoniens <br /> (commme moi)
-              d'adapter la page en cours. <br /> La mise en ligne est pour très
-              bientôt, en attendant le code est disponible sur mon github !
+              Extension navigateur qui réajuste les couleurs d'une page pour les
+              daltoniens — dont je fais partie. Le code est sur GitHub, la mise
+              en ligne arrive.
             </p>{" "}
           </>
         }

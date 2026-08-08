@@ -32,11 +32,9 @@ export default function SectionBakerySim({ darkmode }: SectionProps) {
           <>
             {" "}
             <p className="">
-              Est un simulateur de gestion de boulangerie de type "Idle /
-              Autoclicker" ! Anciennement jouable, le serveur de jeu est
-              désormais fermé. <br />
-              Un debug-mode a été ajouté en plus du système d'inscription pour
-              modérer les comptes.
+              Simulateur de gestion de boulangerie de type idle. Le serveur de
+              jeu est fermé depuis ; un mode debug accompagne le système de
+              comptes.
             </p>{" "}
           </>
         }
