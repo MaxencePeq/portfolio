@@ -5,10 +5,11 @@ type SectionProps = {
 };
 
 const images = [
-  "/img/project/pro/lebelouvrage/1.png",
   "/img/project/pro/lebelouvrage/2.png",
   "/img/project/pro/lebelouvrage/3.png",
   "/img/project/pro/lebelouvrage/4.png",
+  "/img/project/pro/lebelouvrage/5.png",
+  "/img/project/pro/lebelouvrage/6.png",
 ];
 
 const stack = [
