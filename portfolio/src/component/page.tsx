@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Navbar from "./navbar";
 import Footer from "./footer";
 
@@ -10,6 +11,14 @@ type AppProps = {
 
 function ComponentPage({ darkmode, setDarkmode, content }: AppProps) {
   // bg-bg : #181e37 en sombre, #f6f8fc en clair
+  const { pathname, hash, key } = useLocation();
+
+  // react-router conserve le scroll entre les routes et ignore le fragment
+  useEffect(() => {
+    const target = hash && document.querySelector(hash);
+    if (target) target.scrollIntoView({ behavior: "smooth" });
+    else window.scrollTo(0, 0);
+  }, [pathname, hash, key]);
 
   useEffect(() => {
     document.title = "Portfolio Maxence";

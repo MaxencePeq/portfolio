@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 type navbarProps = {
   darkmode: boolean;
@@ -50,20 +51,20 @@ export default function Navbar({ darkmode, setDarkmode }: navbarProps) {
       className={`flex flex-row items-center justify-between gap-3 border-b px-4 py-4 transition-colors duration-300 sm:px-10 sm:py-5 ${glass}`}
     >
       {/* type-eyebrow + text-text */}
-      <a href="/#accueil" className="type-eyebrow text-text text-sm">
+      <Link to="/#accueil" className="type-eyebrow text-text text-sm">
         MP
-      </a>
+      </Link>
 
       {/* text-muted, text-text au hover */}
       <div className="flex flex-row items-center gap-4 text-xs sm:gap-8 sm:text-base">
         {links.map(({ label, to }) => (
-          <a
+          <Link
             key={label}
-            href={to}
+            to={to}
             className="text-muted transition-colors hover:text-text"
           >
             {label}
-          </a>
+          </Link>
         ))}
       </div>
 
