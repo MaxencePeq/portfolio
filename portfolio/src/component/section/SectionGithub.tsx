@@ -1,9 +1,6 @@
 import { GitHubCalendar } from "react-github-calendar";
-import {
-  getLeftBorderColor,
-  getMode,
-  getGitChartTextColor,
-} from "../../utils/infoCalc";
+import { getMode } from "../../utils/infoCalc";
+import SectionTitle from "../sectionTitle";
 import Darkbox from "../box/darkbox";
 import Lightbox from "../box/lightbox";
 
@@ -17,11 +14,7 @@ export default function SectionGithub({ darkmode }: SectionProps) {
       darkmode={darkmode}
       content={
         <div className="flex flex-col gap-y-8">
-          <p
-            className={`text-2xl xl:text-4xl text-white font-semibold border-l-4 pl-4 ${getLeftBorderColor(darkmode)} `}
-          >
-            Mes contributions hors travail et étude
-          </p>
+          <SectionTitle text="Hors écran" />
           <div className="max-sm:hidden">
             <Lightbox
               darkmode={darkmode}
@@ -31,7 +24,7 @@ export default function SectionGithub({ darkmode }: SectionProps) {
                   colorScheme={getMode(darkmode)}
                   year={"last"}
                   showColorLegend
-                  style={{ color: `${getGitChartTextColor(darkmode)}` }}
+                  style={{ color: "var(--text)" }}
                 />
               }
               ImageBlockingHeight={false}
@@ -49,7 +42,7 @@ export default function SectionGithub({ darkmode }: SectionProps) {
                   blockSize={4} /* défaut : 14 */
                   blockMargin={1} /* défaut : 4 */
                   fontSize={5}
-                  style={{ color: `${getGitChartTextColor(darkmode)}` }}
+                  style={{ color: "var(--text)" }}
                 />
               }
               ImageBlockingHeight={false}

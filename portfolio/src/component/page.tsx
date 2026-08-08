@@ -8,7 +8,7 @@ type AppProps = {
 };
 
 function ComponentPage({ darkmode, setDarkmode, content }: AppProps) {
-  const bgColor = darkmode ? "bg-[#181E37]" : "bg-[#FEFEFE]";
+  // bg-bg : #181e37 en sombre, #f6f8fc en clair
 
   useEffect(() => {
     document.title = "Portfolio Maxence";
@@ -24,7 +24,7 @@ function ComponentPage({ darkmode, setDarkmode, content }: AppProps) {
   }, []);
 
   return (
-    <div className={`${bgColor} min-h-screen`}>
+    <div className="bg-bg min-h-screen">
       <div className="fixed top-0 left-0 w-full z-50">
         <Navbar darkmode={darkmode} setDarkmode={setDarkmode} />
       </div>
