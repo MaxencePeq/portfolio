@@ -12,7 +12,6 @@ export default function SectionHome({ darkmode }: SectionHomeProps) {
       content={
         <div
           className="flex flex-col md:flex-row gap-8 md:gap-x-14 items-center"
-          id="accueil"
         >
           <div className="flex flex-col flex-1 gap-6 md:gap-10 w-full">
             <p className="type-eyebrow text-accent-text">

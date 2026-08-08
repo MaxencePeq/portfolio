@@ -11,7 +11,7 @@ export default function SectionPassionButton({ darkmode }: SectionProps) {
     <Darkbox
       darkmode={darkmode}
       content={
-        <div className="flex flex-col gap-y-10" id="passions">
+        <div className="flex flex-col gap-y-10">
           <SectionTitle text="Activité hors de l'école" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
