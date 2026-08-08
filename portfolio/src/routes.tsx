@@ -49,10 +49,10 @@ export default function AppRoutes({ AppIsDarkmode }: RoutesProps) {
             content={
               <>
                 {section(<SectionHome darkmode={darkmode} />)}
+                {section(<SectionLebelouvrage darkmode={darkmode} />)}
                 {section(<SectionGithub darkmode={darkmode} />)}
                 {section(<SectionPassionButton darkmode={darkmode} />)}
                 {section(<SectionStack darkmode={darkmode} />)}
-                {section(<SectionLebelouvrage darkmode={darkmode} />)}
                 {section(<SectionBuddy darkmode={darkmode} />)}
                 {section(<SectionWFC darkmode={darkmode} />)}
                 {section(<SectionPortfolio darkmode={darkmode} />)}

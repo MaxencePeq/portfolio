@@ -43,14 +43,7 @@ export default function SectionLebelouvrage({ darkmode }: SectionProps) {
               >
                 Calvin Nogueira
               </a>
-              . <br />
-              Lien :{" "}
-              <a
-                href="https://lebelouvrage.bzh"
-                className={`underline ${underlineColor} decoration-2`}
-              >
-                Lebelouvrage.bzh
-              </a>{" "}
+              .
             </p>{" "}
           </>
         }
