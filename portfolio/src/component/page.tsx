@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Navbar from "./navbar";
+import Footer from "./footer";
 
 type AppProps = {
   darkmode: boolean;
@@ -30,6 +31,8 @@ function ComponentPage({ darkmode, setDarkmode, content }: AppProps) {
       </div>
 
       <main>{content}</main>
+
+      <Footer />
     </div>
   );
 }
