@@ -8,6 +8,7 @@ const images = [
   "/img/project/perso/portfolio/1.png",
   "/img/project/perso/portfolio/2.png",
   "/img/project/perso/portfolio/3.png",
+  "/img/project/perso/portfolio/4.png",
 ];
 
 const stack = [
