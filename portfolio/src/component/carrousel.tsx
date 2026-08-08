@@ -32,7 +32,7 @@ export default function Carrousel({ images }: CarrouselProps) {
   }, [resetTimer, images.length]);
 
   return (
-    <div className="relative w-full max-w-[700px] mx-auto overflow-hidden rounded-lg">
+    <div className="relative w-full overflow-hidden">
       <div
         className="flex transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${current * 100}%)` }}
@@ -42,7 +42,7 @@ export default function Carrousel({ images }: CarrouselProps) {
             key={i}
             src={img}
             alt={`Slide ${i + 1}`}
-            className="w-full h-auto max-h-[300px] lg:max-h-[500px] object-contain flex-shrink-0"
+            className="w-full h-auto max-h-[38vh] lg:max-h-[45vh] object-contain flex-shrink-0"
           />
         ))}
       </div>

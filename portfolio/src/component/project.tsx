@@ -1,6 +1,4 @@
-import { getLeftBorderColor } from "../utils/infoCalc";
-import Darkbox from "./box/darkbox";
-import Stackbox from "./box/stackbox";
+import DescriptionProjetStack from "./box/descriptionProjetStack";
 import Carrousel from "./carrousel";
 
 type ProjectProps = {
@@ -17,8 +15,6 @@ type ProjectProps = {
 };
 
 export default function Project({
-  darkmode,
-  isFirstInType,
   type,
   images,
   title,
@@ -28,72 +24,47 @@ export default function Project({
   description,
   stacks,
 }: ProjectProps) {
-  const underlineColor = darkmode ? "decoration-[#2563EB]" : "decoration-white";
-  const TitleColor = darkmode ? "text-[#2563EB]" : "text-white";
-
-  // Const avec le contenu des titres
+  // Const avec le contenu des titres -> type-section + text-text, flèche en text-accent-text
   const titleContent = isLink ? (
-    <a
-      href={`${titleLink}`}
-      className={`underline ${underlineColor} decoration-2 ${TitleColor} font-bold`}
-    >
-      {title}
+    <a href={`${titleLink}`} className="hover:text-accent-text">
+      {title} <span className="text-accent-text">↗</span>
     </a>
   ) : (
     <>{title}</>
   );
 
-  // Const avec le contenu du type de projet
-  const typeContent = isFirstInType ? (
-    <p
-      className={`text-2xl sm:text-4xl text-white font-semibold border-l-4 pl-4 mb-3 ${getLeftBorderColor(darkmode)}`}
-    >
-      Réalisations {type}
+  // Const avec l'année + le type du projet -> type-eyebrow + text-muted
+  const header = (
+    <p className="type-eyebrow text-muted">
+      {year} · {type}
     </p>
-  ) : null;
+  );
+
+  const card = `bg-surface border border-line rounded-2xl overflow-hidden`;
+  const hover = "hover:-translate-y-[2px] transition-transform duration-200";
 
   // Const avec le reste du contenu
   const content = (
-    <>
-      <Darkbox
-        darkmode={darkmode}
-        content={
-          <div className="flex flex-col gap-y-4">
-            {typeContent}
-            <div className="flex flex-col gap-y-3">
-              <p className="text-2xl text-white text-center font-semibold">
-                {" "}
-                {year} {titleContent}{" "}
-              </p>
-              <div className="text-sm text-white text-center">
-                {description}
-              </div>
+    <div className={`w-full max-w-275 min-w-0 mx-auto ${card} ${hover}`}>
+      {/* Carousel */}
+      <Carrousel images={images} />
 
-              {/* Carousel */}
-              <Carrousel images={images} />
+      <div className="flex flex-col gap-y-4 p-6 sm:gap-y-5 sm:p-10">
+        {/* Header avec année + type du projet */}
+        {header}
 
-              {/* Stack */}
-              <div className="flex flex-row gap-x-2 gap-y-2 flex-1 items-center justify-center flex-wrap">
-                {stacks.map((stacks) => (
-                  <Stackbox
-                    key={stacks.title}
-                    darkmode={darkmode}
-                    image={
-                      <img
-                        src={stacks.img}
-                        alt={`${stacks.title}`}
-                        className="h-8 sm:h-10 w-8 sm:w-10 object-contain"
-                      />
-                    }
-                    name={stacks.title}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        }
-      />
-    </>
+        <p className="type-section text-text">{titleContent}</p>
+
+        <div className="type-body text-muted">{description}</div>
+
+        {/* Stack */}
+        <div className="flex flex-row gap-x-2 gap-y-2 flex-wrap">
+          {stacks.map((stacks) => (
+            <DescriptionProjetStack key={stacks.title} name={stacks.title} />
+          ))}
+        </div>
+      </div>
+    </div>
   );
   return content;
 }
