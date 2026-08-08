@@ -51,6 +51,20 @@
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
+/* --- Animation d'entrée ---------------------------------------------------
+   Donne la classe `animate-slide-in`. `backwards` est obligatoire : sans lui
+   l'élément est visible à sa place finale pendant son animation-delay. */
+@theme {
+  --animate-slide-in: slide-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+
+  @keyframes slide-in {
+    from {
+      opacity: 0;
+      transform: translateX(3rem);
+    }
+  }
+}
+
 @layer base {
   /* Colorisation de l'overscroll */
   html {
@@ -61,11 +75,22 @@
     background-color: var(--bg);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    /* les éléments de slide-in débordent à droite pendant l'anim */
+    overflow-x: hidden;
   }
 
   ::selection {
     background-color: var(--accent);
     color: var(--accent-contrast);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
   }
 }
 
