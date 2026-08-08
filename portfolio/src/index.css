@@ -52,7 +52,13 @@
 }
 
 @layer base {
+  /* Colorisation de l'overscroll */
+  html {
+    background-color: var(--bg);
+  }
+
   body {
+    background-color: var(--bg);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }

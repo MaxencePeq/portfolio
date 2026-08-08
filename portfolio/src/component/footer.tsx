@@ -15,14 +15,11 @@ export default function Footer() {
     <footer className="border-t border-line">
       <div className="w-full max-w-275 min-w-0 mx-auto flex flex-col gap-10 px-4 py-16 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-4">
-          {/* type-eyebrow + text-muted */}
           <p className="type-eyebrow text-muted">Contact</p>
 
-          {/* type-section + text-text */}
           <p className="type-section text-text">Disponible pour un projet</p>
         </div>
 
-        {/* text-text, text-accent-text au hover */}
         <div className="flex flex-row flex-wrap items-center gap-x-10 gap-y-3">
           {contacts.map(({ label, to }) => (
             <a
@@ -35,7 +32,6 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* font-mono + text-muted */}
         <p className="font-mono text-xs tracking-wider text-muted">
           © {new Date().getFullYear()} Maxence Pequeno
         </p>
