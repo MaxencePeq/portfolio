@@ -1,7 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <!-- Pose .dark avant le premier paint, sinon flash clair au chargement.
+         Clé + défaut dupliqués depuis routes.tsx : React démarre trop tard. -->
+    <script>
+      (() => {
+        const saved = localStorage.getItem("portfolio-darkmode");
+        if (saved === null || saved === "true")
+          document.documentElement.classList.add("dark");
+      })();
+    </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -10,7 +19,40 @@
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Instrument+Sans:wdth,wght@75..100,400..700&family=JetBrains+Mono:wght@400..700&display=swap"
       rel="stylesheet"
     />
-    <title>portfolio</title>
+    <title>Maxence Pequeno — Développeur full-stack</title>
+    <meta
+      name="description"
+      content="Étudiant développeur full-stack. Back-end Symfony et Laravel, front-end React. Un site d'artisan en production et une extension navigateur pour daltoniens."
+    />
+    <meta name="author" content="Maxence Pequeno" />
+    <!-- couleur de la barre du navigateur mobile, alignée sur le token --bg -->
+    <meta
+      name="theme-color"
+      content="#f6f8fc"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#181e37"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <!-- Aperçu au partage (LinkedIn, Slack, Discord, iMessage...)
+         TODO : quand le domaine sera fixé, passer og:url et og:image en URL
+         absolues et remplacer l'image par un visuel dédié en 1200x630. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Maxence Pequeno" />
+    <meta
+      property="og:title"
+      content="Maxence Pequeno — Développeur full-stack"
+    />
+    <meta
+      property="og:description"
+      content="Étudiant développeur full-stack. Back-end Symfony et Laravel, front-end React. Un site d'artisan en production et une extension navigateur pour daltoniens."
+    />
+    <meta property="og:image" content="/img/me/mePhoto.png" />
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
     <div id="root"></div>

@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import ComponentPage from "./component/page";
-import SectionHome from "./component/section/SectionHome";
-import SectionGithub from "./component/section/SectionGithub";
-import SectionPassionButton from "./component/button/passionButton";
+import Page from "./components/Page";
+import SectionHome from "./components/section/SectionHome";
+import SectionGithub from "./components/section/SectionGithub";
+import SectionPassionButton from "./components/section/SectionPassionButton";
 import { section } from "./utils/section";
-import SectionPassions from "./component/section/SectionPassions";
-import SectionCv from "./component/section/SectionCV";
-import SectionStack from "./component/section/SectionStack";
-import SectionBuddy from "./component/section/project/academique/SectionBuddy";
-import SectionWFC from "./component/section/project/perso/SectionWFC";
-import SectionLebelouvrage from "./component/section/project/pro/SectionLebelouvrage";
-import SectionBakerySim from "./component/section/project/perso/SectionBakery-sim";
-import SectionWebMusic from "./component/section/project/perso/SectionWebMusic";
-import SectionPortfolio from "./component/section/project/perso/SectionPortfolio";
+import SectionPassions from "./components/section/SectionPassions";
+import SectionCv from "./components/section/SectionCV";
+import SectionStack from "./components/section/SectionStack";
+import SectionBuddy from "./components/section/project/academique/SectionBuddy";
+import SectionWFC from "./components/section/project/perso/SectionWFC";
+import SectionLebelouvrage from "./components/section/project/pro/SectionLebelouvrage";
+import SectionBakerySim from "./components/section/project/perso/SectionBakerySim";
+import SectionWebMusic from "./components/section/project/perso/SectionWebMusic";
+import SectionPortfolio from "./components/section/project/perso/SectionPortfolio";
 
 type RoutesProps = {
   AppIsDarkmode: boolean;
@@ -43,31 +43,26 @@ export default function AppRoutes({ AppIsDarkmode }: RoutesProps) {
       <Route
         path="/"
         element={
-          <ComponentPage
+          <Page
             darkmode={darkmode}
             setDarkmode={setDarkmode}
             content={
               <>
-                {section(<SectionHome darkmode={darkmode} />, "accueil")}
-                {section(
-                  <SectionLebelouvrage darkmode={darkmode} />,
-                  "projets",
-                )}
+                {section(<SectionHome />, "accueil")}
+                {section(<SectionLebelouvrage />, "projets")}
                 {section(
                   <div className="w-full max-w-275 min-w-0 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    <SectionBuddy darkmode={darkmode} />
-                    <SectionWFC darkmode={darkmode} />
-                    <SectionPortfolio darkmode={darkmode} />
-                    <SectionBakerySim darkmode={darkmode} />
-                    <SectionWebMusic darkmode={darkmode} />
+                    <SectionBuddy />
+                    <SectionWFC />
+                    <SectionPortfolio />
+                    <SectionBakerySim />
+                    <SectionWebMusic />
                   </div>,
                 )}
-                {section(<SectionStack darkmode={darkmode} />, "stack")}
+                {section(<SectionStack />, "stack")}
+                {/* seul composant qui a encore besoin de la valeur en JS */}
                 {section(<SectionGithub darkmode={darkmode} />)}
-                {section(
-                  <SectionPassionButton darkmode={darkmode} />,
-                  "passions",
-                )}
+                {section(<SectionPassionButton />, "passions")}
               </>
             }
           />
@@ -77,10 +72,10 @@ export default function AppRoutes({ AppIsDarkmode }: RoutesProps) {
       <Route
         path="/passions"
         element={
-          <ComponentPage
+          <Page
             darkmode={darkmode}
             setDarkmode={setDarkmode}
-            content={<>{section(<SectionPassions darkmode={darkmode} />)}</>}
+            content={section(<SectionPassions />)}
           />
         }
       />
@@ -88,10 +83,10 @@ export default function AppRoutes({ AppIsDarkmode }: RoutesProps) {
       <Route
         path="/cv"
         element={
-          <ComponentPage
+          <Page
             darkmode={darkmode}
             setDarkmode={setDarkmode}
-            content={<>{section(<SectionCv darkmode={darkmode} />)}</>}
+            content={section(<SectionCv />)}
           />
         }
       />
