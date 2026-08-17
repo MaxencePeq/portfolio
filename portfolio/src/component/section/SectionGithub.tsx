@@ -14,7 +14,7 @@ export default function SectionGithub({ darkmode }: SectionProps) {
       darkmode={darkmode}
       content={
         <div className="flex flex-col gap-y-8">
-          <SectionTitle text="Hors écran" />
+          <SectionTitle text="Mon activité hors études" />
           <div className="max-sm:hidden">
             <Lightbox
               darkmode={darkmode}
