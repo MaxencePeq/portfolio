@@ -1,16 +1,16 @@
 import Project from "../../../Project";
 
 const images = [
-  "/img/project/perso/bakery-sim/intro.png",
-  "/img/project/perso/bakery-sim/full.png",
-  "/img/project/perso/bakery-sim/debug.png",
+  "/img/project/perso/bakery-sim/intro.webp",
+  "/img/project/perso/bakery-sim/full.webp",
+  "/img/project/perso/bakery-sim/debug.webp",
 ];
 
 const stack = [
-  { img: "/img/stack/php.png", title: "PHP" },
-  { img: "/img/stack/composer.png", title: "Composer" },
-  { img: "/img/stack/html-5.png", title: "HTML" },
-  { img: "/img/stack/css-3.png", title: "CSS" },
+  { img: "/img/stack/php.webp", title: "PHP" },
+  { img: "/img/stack/composer.webp", title: "Composer" },
+  { img: "/img/stack/html-5.webp", title: "HTML" },
+  { img: "/img/stack/css-3.webp", title: "CSS" },
 ];
 
 export default function SectionBakerySim() {

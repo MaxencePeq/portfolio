@@ -1,16 +1,16 @@
 import Project from "../../../Project";
 
 const images = [
-  "/img/project/perso/WFC/1.png",
-  "/img/project/perso/WFC/2.png",
-  "/img/project/perso/WFC/3.png",
-  "/img/project/perso/WFC/4.png",
+  "/img/project/perso/WFC/1.webp",
+  "/img/project/perso/WFC/2.webp",
+  "/img/project/perso/WFC/3.webp",
+  "/img/project/perso/WFC/4.webp",
 ];
 
 const stack = [
-  { img: "/img/stack/js.png", title: "JavaScript" },
-  { img: "/img/stack/html-5.png", title: "HTML" },
-  { img: "/img/stack/css-3.png", title: "CSS" },
+  { img: "/img/stack/js.webp", title: "JavaScript" },
+  { img: "/img/stack/html-5.webp", title: "HTML" },
+  { img: "/img/stack/css-3.webp", title: "CSS" },
 ];
 
 export default function SectionWFC() {

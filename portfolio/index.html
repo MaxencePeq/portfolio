@@ -2,8 +2,6 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <!-- Pose .dark avant le premier paint, sinon flash clair au chargement.
-         Clé + défaut dupliqués depuis routes.tsx : React démarre trop tard. -->
     <script>
       (() => {
         const saved = localStorage.getItem("portfolio-darkmode");
@@ -36,23 +34,6 @@
       content="#181e37"
       media="(prefers-color-scheme: dark)"
     />
-
-    <!-- Aperçu au partage (LinkedIn, Slack, Discord, iMessage...)
-         TODO : quand le domaine sera fixé, passer og:url et og:image en URL
-         absolues et remplacer l'image par un visuel dédié en 1200x630. -->
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="fr_FR" />
-    <meta property="og:site_name" content="Maxence Pequeno" />
-    <meta
-      property="og:title"
-      content="Maxence Pequeno — Développeur full-stack"
-    />
-    <meta
-      property="og:description"
-      content="Étudiant développeur full-stack. Back-end Symfony et Laravel, front-end React. Un site d'artisan en production et une extension navigateur pour daltoniens."
-    />
-    <meta property="og:image" content="/img/me/mePhoto.png" />
-    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
     <div id="root"></div>
