@@ -1,18 +1,18 @@
 import Project from "../../../Project";
 
 const images = [
-  "/img/project/perso/webmusic/index.png",
-  "/img/project/perso/webmusic/album.png",
-  "/img/project/perso/webmusic/album-track.png",
-  "/img/project/perso/webmusic/song.png",
+  "/img/project/perso/webmusic/index.webp",
+  "/img/project/perso/webmusic/album.webp",
+  "/img/project/perso/webmusic/album-track.webp",
+  "/img/project/perso/webmusic/song.webp",
 ];
 
 const stack = [
-  { img: "/img/stack/php.png", title: "PHP" },
-  { img: "/img/stack/pdo.png", title: "PDO" },
-  { img: "/img/stack/composer.png", title: "Composer" },
-  { img: "/img/stack/html-5.png", title: "HTML" },
-  { img: "/img/stack/css-3.png", title: "CSS" },
+  { img: "/img/stack/php.webp", title: "PHP" },
+  { img: "/img/stack/pdo.webp", title: "PDO" },
+  { img: "/img/stack/composer.webp", title: "Composer" },
+  { img: "/img/stack/html-5.webp", title: "HTML" },
+  { img: "/img/stack/css-3.webp", title: "CSS" },
 ];
 
 export default function SectionWebMusic() {

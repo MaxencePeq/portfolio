@@ -13,7 +13,7 @@ export default function SectionPassionButton() {
             <div className="group p-6 rounded-2xl bg-surface border border-line">
               <div className="text-5xl mb-3">
                 <img
-                  src="/img/illustration/bojangles.jpg"
+                  src="/img/illustration/bojangles.webp"
                   alt=""
                   loading="lazy"
                   decoding="async"
@@ -29,7 +29,7 @@ export default function SectionPassionButton() {
             <div className="group p-6 rounded-2xl bg-surface border border-line">
               <div className="text-5xl mb-3">
                 <img
-                  src="/img/illustration/pianist.jpg"
+                  src="/img/illustration/pianist.webp"
                   alt=""
                   loading="lazy"
                   decoding="async"

@@ -3,35 +3,35 @@ import Darkbox from "../box/Darkbox";
 import Stackbox from "../box/Stackbox";
 
 const frameworks = [
-  { img: "/img/stack/symfony.png", title: "Symfony" },
-  { img: "/img/stack/laravel.png", title: "Laravel" },
-  { img: "/img/stack/react.png", title: "React" },
-  { img: "/img/stack/net.png", title: ".NET" },
+  { img: "/img/stack/symfony.webp", title: "Symfony" },
+  { img: "/img/stack/laravel.webp", title: "Laravel" },
+  { img: "/img/stack/react.webp", title: "React" },
+  { img: "/img/stack/net.webp", title: ".NET" },
   { img: "/img/stack/api.webp", title: "API Platform" },
 ];
 
 const outils = [
-  { img: "/img/stack/docker.png", title: "Docker" },
-  { img: "/img/stack/mysql.png", title: "MySQL" },
-  { img: "/img/stack/serveur-sql.png", title: "SQL" },
-  { img: "/img/stack/git.png", title: "Git" },
-  { img: "/img/stack/phpmyadmin.png", title: "phpMyAdmin" },
-  { img: "/img/stack/composer.png", title: "Composer" },
-  { img: "/img/stack/tailwind.png", title: "Tailwind CSS" },
-  { img: "/img/stack/bootstrap.png", title: "Bootstrap" },
+  { img: "/img/stack/docker.webp", title: "Docker" },
+  { img: "/img/stack/mysql.webp", title: "MySQL" },
+  { img: "/img/stack/serveur-sql.webp", title: "SQL" },
+  { img: "/img/stack/git.webp", title: "Git" },
+  { img: "/img/stack/phpmyadmin.webp", title: "phpMyAdmin" },
+  { img: "/img/stack/composer.webp", title: "Composer" },
+  { img: "/img/stack/tailwind.webp", title: "Tailwind CSS" },
+  { img: "/img/stack/bootstrap.webp", title: "Bootstrap" },
 ];
 
 const languages = [
-  { img: "/img/stack/php.png", title: "PHP" },
-  { img: "/img/stack/js.png", title: "JavaScript" },
-  { img: "/img/stack/cs.png", title: "C#" },
-  { img: "/img/stack/python.png", title: "Python" },
-  { img: "/img/stack/twig.png", title: "Twig" },
-  { img: "/img/stack/blade.png", title: "Blade" },
-  { img: "/img/stack/jsx.png", title: "JSX" },
-  { img: "/img/stack/typescript.png", title: "TypeScript" },
-  { img: "/img/stack/html-5.png", title: "HTML" },
-  { img: "/img/stack/css-3.png", title: "CSS" },
+  { img: "/img/stack/php.webp", title: "PHP" },
+  { img: "/img/stack/js.webp", title: "JavaScript" },
+  { img: "/img/stack/cs.webp", title: "C#" },
+  { img: "/img/stack/python.webp", title: "Python" },
+  { img: "/img/stack/twig.webp", title: "Twig" },
+  { img: "/img/stack/blade.webp", title: "Blade" },
+  { img: "/img/stack/jsx.webp", title: "JSX" },
+  { img: "/img/stack/typescript.webp", title: "TypeScript" },
+  { img: "/img/stack/html-5.webp", title: "HTML" },
+  { img: "/img/stack/css-3.webp", title: "CSS" },
 ];
 
 export default function SectionStack() {

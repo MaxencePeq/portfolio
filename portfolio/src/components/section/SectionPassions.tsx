@@ -3,29 +3,29 @@ import ImageSlider from "../slider/ImageSlider";
 
 const images = [
   {
-    src: "/img/illustration/bojangles.jpg",
+    src: "/img/illustration/bojangles.webp",
     title: "En attendant bojangles",
   },
   {
-    src: "/img/illustration/glg.jpg",
+    src: "/img/illustration/glg.webp",
     title: "Gagner la guerre",
   },
-  { src: "/img/illustration/gary.jpg", title: "La promesse de l'aube" },
+  { src: "/img/illustration/gary.webp", title: "La promesse de l'aube" },
   {
-    src: "/img/illustration/lmdf.jpg",
+    src: "/img/illustration/lmdf.webp",
     title: "La Maison des Feuilles",
   },
   {
-    src: "/img/illustration/lotr.jpg",
+    src: "/img/illustration/lotr.webp",
     title: "Le seigneur des anneaux",
   },
-  { src: "/img/illustration/witcher.jpg", title: "The witcher" },
+  { src: "/img/illustration/witcher.webp", title: "The witcher" },
   {
-    src: "/img/illustration/wager.jpg",
+    src: "/img/illustration/wager.webp",
     title: "Les naufragés du Wager",
   },
-  { src: "/img/illustration/petitprince.jpg", title: "Le petit prince" },
-  { src: "/img/illustration/foret.jpg", title: "L'appel de la forêt" },
+  { src: "/img/illustration/petitprince.webp", title: "Le petit prince" },
+  { src: "/img/illustration/foret.webp", title: "L'appel de la forêt" },
 ];
 
 export default function SectionPassions() {

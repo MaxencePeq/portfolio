@@ -40,7 +40,7 @@ export default function SectionHome() {
             </p>
           </div>
           <img
-            src="/img/me/mePhoto.png"
+            src="/img/me/mePhoto.webp"
             alt="Maxence Pequeno"
             // image LCP : surtout pas de lazy ici
             fetchPriority="high"

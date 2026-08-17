@@ -1,22 +1,22 @@
 import Project from "../../../Project";
 
 const images = [
-  "/img/project/academique/buddy/accueil.png",
-  "/img/project/academique/buddy/chat.png",
-  "/img/project/academique/buddy/etudiant.png",
-  "/img/project/academique/buddy/famille.png",
-  "/img/project/academique/buddy/login.png",
-  "/img/project/academique/buddy/profile.png",
+  "/img/project/academique/buddy/accueil.webp",
+  "/img/project/academique/buddy/chat.webp",
+  "/img/project/academique/buddy/etudiant.webp",
+  "/img/project/academique/buddy/famille.webp",
+  "/img/project/academique/buddy/login.webp",
+  "/img/project/academique/buddy/profile.webp",
 ];
 
 const stack = [
-  { img: "/img/stack/symfony.png", title: "Symfony" },
-  { img: "/img/stack/js.png", title: "JavaScript" },
-  { img: "/img/stack/twig.png", title: "Twig" },
-  { img: "/img/stack/bootstrap.png", title: "Bootstrap" },
-  { img: "/img/stack/mysql.png", title: "MySQL" },
-  { img: "/img/stack/serveur-sql.png", title: "SQL" },
-  { img: "/img/stack/git.png", title: "Git" },
+  { img: "/img/stack/symfony.webp", title: "Symfony" },
+  { img: "/img/stack/js.webp", title: "JavaScript" },
+  { img: "/img/stack/twig.webp", title: "Twig" },
+  { img: "/img/stack/bootstrap.webp", title: "Bootstrap" },
+  { img: "/img/stack/mysql.webp", title: "MySQL" },
+  { img: "/img/stack/serveur-sql.webp", title: "SQL" },
+  { img: "/img/stack/git.webp", title: "Git" },
 ];
 
 export default function SectionBuddy() {

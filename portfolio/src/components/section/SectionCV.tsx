@@ -1,7 +1,7 @@
 import Darkbox from "../box/Darkbox";
 
 export default function SectionCv() {
-  const cvImagePath = "/img/me/cv.jpg";
+  const cvImagePath = "/img/me/cv.webp";
 
   const handlePrint = () => {
     const printWindow = window.open(cvImagePath, "print");
@@ -38,7 +38,7 @@ export default function SectionCv() {
             {/* <a download> natif : pas besoin de fabriquer un lien en JS */}
             <a
               href={cvImagePath}
-              download="CV-Maxence-Pequeno.jpg"
+              download="CV-Maxence-Pequeno.webp"
               className={`${darkButtonStyle} ${buttonBase} inline-block text-center`}
             >
               Télécharger

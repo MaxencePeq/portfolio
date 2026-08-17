@@ -1,19 +1,19 @@
 import Project from "../../../Project";
 
 const images = [
-  "/img/project/perso/portfolio/1.png",
-  "/img/project/perso/portfolio/2.png",
-  "/img/project/perso/portfolio/3.png",
-  "/img/project/perso/portfolio/4.png",
+  "/img/project/perso/portfolio/1.webp",
+  "/img/project/perso/portfolio/2.webp",
+  "/img/project/perso/portfolio/3.webp",
+  "/img/project/perso/portfolio/4.webp",
 ];
 
 const stack = [
-  { img: "/img/stack/react.png", title: "React" },
-  { img: "/img/stack/docker.png", title: "Docker" },
-  { img: "/img/stack/tailwind.png", title: "Tailwind CSS" },
-  { img: "/img/stack/typescript.png", title: "TypeScript" },
-  { img: "/img/stack/jsx.png", title: "JSX" },
-  { img: "/img/stack/git.png", title: "Git" },
+  { img: "/img/stack/react.webp", title: "React" },
+  { img: "/img/stack/docker.webp", title: "Docker" },
+  { img: "/img/stack/tailwind.webp", title: "Tailwind CSS" },
+  { img: "/img/stack/typescript.webp", title: "TypeScript" },
+  { img: "/img/stack/jsx.webp", title: "JSX" },
+  { img: "/img/stack/git.webp", title: "Git" },
 ];
 
 export default function SectionPortfolio() {
