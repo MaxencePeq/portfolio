@@ -51,9 +51,7 @@
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
-/* --- Animation d'entrée ---------------------------------------------------
-   Donne la classe `animate-slide-in`. `backwards` est obligatoire : sans lui
-   l'élément est visible à sa place finale pendant son animation-delay. */
+
 @theme {
   --animate-slide-in: slide-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) backwards;
 
@@ -61,6 +59,14 @@
     from {
       opacity: 0;
       transform: translateX(3rem);
+    }
+  }
+
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
     }
   }
 }
@@ -94,8 +100,7 @@
   }
 }
 
-/* --- Échelle typographique ------------------------------------------------
-   Le display ne sert QUE pour le nom et les titres de section. */
+ /*  Le display ne sert QUE pour le nom et les titres de section. */
 @utility type-hero {
   font-family: var(--font-display);
   font-size: clamp(3.25rem, 11vw, 8rem);
