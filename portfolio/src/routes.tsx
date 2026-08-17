@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Page from "./components/Page";
 import SectionHome from "./components/section/SectionHome";
-import SectionGithub from "./components/section/SectionGithub";
 import SectionPassionButton from "./components/section/SectionPassionButton";
 import { section } from "./utils/section";
 import SectionPassions from "./components/section/SectionPassions";
@@ -60,8 +59,6 @@ export default function AppRoutes({ AppIsDarkmode }: RoutesProps) {
                   </div>,
                 )}
                 {section(<SectionStack />, "stack")}
-                {/* seul composant qui a encore besoin de la valeur en JS */}
-                {section(<SectionGithub darkmode={darkmode} />)}
                 {section(<SectionPassionButton />, "passions")}
               </>
             }
