@@ -59,7 +59,7 @@ export default function SectionStack({ darkmode }: SectionProps) {
                     <img
                       src={framework.img}
                       alt={`${framework.title}`}
-                      className="h-8 sm:h-10 w-8 sm:w-10 object-contain"
+                      className="÷dfgrt -8 sm:h-10 w-8 sm:w-10 object-contain"
                     />
                   }
                   name={framework.title}
