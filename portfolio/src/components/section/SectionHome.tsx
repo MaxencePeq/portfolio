@@ -1,23 +1,18 @@
-import DarkButton from "../button/darkButton";
-import Darkbox from "../box/darkbox";
+import DarkButton from "../button/DarkButton";
+import Darkbox from "../box/Darkbox";
 
-type SectionHomeProps = {
-  darkmode: boolean;
-};
-
-export default function SectionHome({ darkmode }: SectionHomeProps) {
+export default function SectionHome() {
   return (
     <Darkbox
-      darkmode={darkmode}
       content={
         <div className="flex flex-col md:flex-row gap-8 md:gap-x-14 items-center">
           <div className="flex flex-col flex-1 gap-6 md:gap-10 w-full">
             <p className="type-eyebrow text-accent-text animate-slide-in">
-              Développeur full-stack · Étudiants
+              Développeur full-stack · Étudiant
             </p>
-            <p className="type-hero text-text animate-slide-in [animation-delay:80ms]">
+            <h1 className="type-hero text-text animate-slide-in [animation-delay:80ms]">
               Maxence Pequeno
-            </p>
+            </h1>
 
             <p className="type-body text-muted max-w-[52ch] animate-slide-in [animation-delay:340ms]">
               Back-end Symfony et Laravel, front-end React. Un site d'artisan en
@@ -46,6 +41,10 @@ export default function SectionHome({ darkmode }: SectionHomeProps) {
           </div>
           <img
             src="/img/me/mePhoto.png"
+            alt="Maxence Pequeno"
+            // image LCP : surtout pas de lazy ici
+            fetchPriority="high"
+            decoding="async"
             className="rounded-2xl w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 xl:w-100 xl:h-100 object-cover shrink-0"
           />
         </div>

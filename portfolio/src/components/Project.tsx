@@ -1,9 +1,7 @@
-import DescriptionProjetStack from "./box/descriptionProjetStack";
-import Carrousel from "./carrousel";
+import DescriptionProjetStack from "./box/DescriptionProjetStack";
+import Carrousel from "./Carrousel";
 
 type ProjectProps = {
-  darkmode: boolean;
-  isFirstInType: boolean;
   type?: "professionnelles" | "personnelles" | "académiques";
   images: string[];
   title: string;
@@ -26,54 +24,45 @@ export default function Project({
   description,
   stacks,
 }: ProjectProps) {
-  // Taille du titre -> type-section si bigTitle, sinon type-card
-  let titleSize = "type-card";
-
-  if (bigTitle) {
-    titleSize = "type-section";
-  }
-
-  // Const avec le contenu des titres -> text-text, flèche en text-accent-text
-  const titleContent = isLink ? (
-    <a href={`${titleLink}`} className="hover:text-accent-text">
-      {title} <span className="text-accent-text">↗</span>
-    </a>
-  ) : (
-    <>{title}</>
-  );
-
-  // Const avec l'année + le type du projet -> type-eyebrow + text-muted
-  const header = (
-    <p className="type-eyebrow text-muted">
-      {year} · {type}
-    </p>
-  );
-
-  const card = `bg-surface border border-line rounded-2xl overflow-hidden`;
+  // Le projet mis en avant est un h2, les cartes de la grille des h3 : ça donne
+  // un plan de page sans saut de niveau sous le h1 de la home.
+  const Heading = bigTitle ? "h2" : "h3";
+  const titleSize = bigTitle ? "type-section" : "type-card";
+  const card = "bg-surface border border-line rounded-2xl overflow-hidden";
   const hover = "hover:-translate-y-[2px] transition-transform duration-200";
 
-  // Const avec le reste du contenu
-  const content = (
+  return (
     <div className={`w-full max-w-275 min-w-0 mx-auto ${card} ${hover}`}>
-      {/* Carousel */}
-      <Carrousel images={images} />
+      <Carrousel images={images} alt={title} />
 
       <div className="flex flex-col gap-y-4 p-6 sm:gap-y-5 sm:p-10">
-        {/* Header avec année + type du projet */}
-        {header}
+        <p className="type-eyebrow text-muted">
+          {year} · {type}
+        </p>
 
-        <p className={`${titleSize} text-text`}>{titleContent}</p>
+        <Heading className={`${titleSize} text-text`}>
+          {isLink ? (
+            <a
+              href={titleLink}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-accent-text"
+            >
+              {title} <span className="text-accent-text">↗</span>
+            </a>
+          ) : (
+            title
+          )}
+        </Heading>
 
         <div className="type-body text-muted">{description}</div>
 
-        {/* Stack */}
         <div className="flex flex-row gap-x-2 gap-y-2 flex-wrap">
-          {stacks.map((stacks) => (
-            <DescriptionProjetStack key={stacks.title} name={stacks.title} />
+          {stacks.map((stack) => (
+            <DescriptionProjetStack key={stack.title} name={stack.title} />
           ))}
         </div>
       </div>
     </div>
   );
-  return content;
 }

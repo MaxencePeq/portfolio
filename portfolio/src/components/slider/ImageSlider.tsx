@@ -1,76 +1,45 @@
-import { useEffect, useRef } from "react";
-import Splide from "@splidejs/splide";
-import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
-import "@splidejs/splide/css";
-import Bookbox from "../box/bookbox";
+import Bookbox from "../box/Bookbox";
 
 type Image = { src: string; title: string };
-type SliderProps = { images: Image[]; darkmode: boolean };
+type ImageSliderProps = { images: Image[] };
 
-export default function Slider({ images, darkmode }: SliderProps) {
-  const splideRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!splideRef.current) return;
-
-    const splide = new Splide(splideRef.current, {
-      type: "loop",
-      drag: false,
-      perPage: 4,
-      gap: "1rem",
-      arrows: false,
-      pagination: false,
-      autoScroll: {
-        speed: 1,
-        pauseOnHover: false,
-        pauseOnFocus: false,
-      },
-      breakpoints: {
-        1024: {
-          perPage: 3,
-        },
-        768: {
-          perPage: 2,
-          gap: "0.75rem",
-        },
-        520: {
-          perPage: 1,
-          gap: "0.75rem",
-        },
-      },
-    });
-
-    splide.mount({ AutoScroll });
-
-    return () => {
-      splide.destroy();
-    };
-  }, [darkmode, images]);
+/**
+ * Étagère à défilement infini. Le ruban est dupliqué et translaté de -50% en
+ * boucle : quand l'animation reboucle, la copie est pile à la position de
+ * l'original, la jointure est invisible.
+ *
+ * L'écart entre les cartes est un `mr-*` sur chaque <li>, PAS un `gap` du
+ * flex : avec un gap, 2N cartes n'ont que 2N-1 écarts et -50% tombe à côté
+ * d'un demi-écart -> saut visible à chaque boucle.
+ */
+export default function ImageSlider({ images }: ImageSliderProps) {
+  const shelf = [...images, ...images];
 
   return (
-    <div ref={splideRef} className="splide w-full max-w-full min-w-0 h-auto">
-      <div className="splide__track overflow-hidden">
-        <ul className="splide__list">
-          {images.map((img, index) => (
-            <li
-              key={index}
-              className="splide__slide flex min-w-0 items-stretch justify-center"
-            >
-              <Bookbox
-                darkmode={darkmode}
-                image={
-                  <img
-                    src={img.src}
-                    alt={img.title}
-                    className="h-36 sm:h-40 lg:h-42 lg:w-42 max-w-full lg:max-w-none object-contain rounded-lg"
-                  />
-                }
-                booktitle={img.title}
-              />
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div className="w-full max-w-full min-w-0 overflow-hidden">
+      <ul className="flex w-max animate-marquee hover:[animation-play-state:paused] focus-within:[animation-play-state:paused]">
+        {shelf.map((img, index) => (
+          <li
+            key={index}
+            // la seconde moitié est un doublon décoratif
+            aria-hidden={index >= images.length}
+            className="mr-3 sm:mr-4 shrink-0 w-40 sm:w-44 lg:w-52 flex items-stretch justify-center"
+          >
+            <Bookbox
+              image={
+                <img
+                  src={img.src}
+                  alt="" /* le titre est déjà affiché sous la couverture */
+                  loading="lazy"
+                  decoding="async"
+                  className="h-36 sm:h-40 lg:h-42 lg:w-42 max-w-full lg:max-w-none object-contain rounded-lg"
+                />
+              }
+              booktitle={img.title}
+            />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

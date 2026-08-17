@@ -1,20 +1,7 @@
-import Darkbox from "../box/darkbox";
+import Darkbox from "../box/Darkbox";
 
-type SectionProps = {
-  darkmode: boolean;
-};
-
-export default function SectionCv({ darkmode }: SectionProps) {
+export default function SectionCv() {
   const cvImagePath = "/img/me/cv.jpg";
-
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = cvImagePath;
-    link.download = "cv.jpg";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   const handlePrint = () => {
     const printWindow = window.open(cvImagePath, "print");
@@ -25,48 +12,47 @@ export default function SectionCv({ darkmode }: SectionProps) {
     }
   };
 
-  // Styles pour le bouton dark
-  const darkButtonStyle = darkmode
-    ? "bg-[#4DA6FF] text-white border-[#BFF0FB]"
-    : "bg-white text-[#2563EB] border-white";
+  // Mêmes tokens que DarkButton : le swap clair/sombre est géré par le CSS.
+  const darkButtonStyle = "bg-accent text-accent-contrast border-accent";
+  const lightButtonStyle =
+    "bg-transparent hover:bg-surface text-text border-line";
 
-  // Styles pour le bouton clair
-  const lightButtonStyle = darkmode
-    ? "bg-[#3A3A5A] text-white border-[#61617B] hover:bg-[#484873]"
-    : "bg-transparent text-white border-white/70 hover:bg-white/10";
+  const buttonBase =
+    "font-semibold border rounded-lg cursor-pointer text-lg py-2 px-6 shadow-sm hover:-translate-y-[2px] transition-all duration-200";
 
   return (
-    <>
-      <Darkbox
-        darkmode={darkmode}
-        content={
-          <div className="flex flex-col items-center w-full gap-6">
-            <p className="text-3xl text-white font-semibold">Mon CV</p>
+    <Darkbox
+      content={
+        <div className="flex flex-col items-center w-full gap-6">
+          <h1 className="text-3xl text-text font-semibold">Mon CV</h1>
 
-            <img
-              src={cvImagePath}
-              alt="CV"
-              className="w-full max-w-md rounded-lg shadow-md"
-            />
+          <img
+            src={cvImagePath}
+            alt="CV de Maxence Pequeno"
+            // contenu principal de la page /cv : pas de lazy
+            decoding="async"
+            className="w-full max-w-md rounded-lg shadow-md"
+          />
 
-            <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-              <button
-                onClick={handleDownload}
-                className={`${darkButtonStyle} font-semibold border rounded-lg cursor-pointer text-lg py-2 px-6 shadow-sm hover:-translate-y-[2px] transition-all duration-200`}
-              >
-                Télécharger
-              </button>
+          <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
+            {/* <a download> natif : pas besoin de fabriquer un lien en JS */}
+            <a
+              href={cvImagePath}
+              download="CV-Maxence-Pequeno.jpg"
+              className={`${darkButtonStyle} ${buttonBase} inline-block text-center`}
+            >
+              Télécharger
+            </a>
 
-              <button
-                onClick={handlePrint}
-                className={`${lightButtonStyle} font-semibold border rounded-lg cursor-pointer text-lg py-2 px-6 shadow-sm hover:-translate-y-[2px] transition-all duration-200`}
-              >
-                Imprimer
-              </button>
-            </div>
+            <button
+              onClick={handlePrint}
+              className={`${lightButtonStyle} ${buttonBase}`}
+            >
+              Imprimer
+            </button>
           </div>
-        }
-      />
-    </>
+        </div>
+      }
+    />
   );
 }

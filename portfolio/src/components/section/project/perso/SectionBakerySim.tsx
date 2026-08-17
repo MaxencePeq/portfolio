@@ -1,8 +1,4 @@
-import Project from "../../../project";
-
-type SectionProps = {
-  darkmode: boolean;
-};
+import Project from "../../../Project";
 
 const images = [
   "/img/project/perso/bakery-sim/intro.png",
@@ -17,31 +13,22 @@ const stack = [
   { img: "/img/stack/css-3.png", title: "CSS" },
 ];
 
-export default function SectionBakerySim({ darkmode }: SectionProps) {
-  const content = (
-    <>
-      <Project
-        darkmode={darkmode}
-        type={"personnelles"}
-        images={images}
-        isLink={true}
-        titleLink="https://github.com/MaxencePeq/BakerySimulator"
-        title={"Bakery Simulator"}
-        year={"2025"}
-        description={
-          <>
-            {" "}
-            <p className="">
-              Simulateur de gestion de boulangerie de type idle. Le serveur de
-              jeu est fermé depuis ; un mode debug accompagne le système de
-              comptes.
-            </p>{" "}
-          </>
-        }
-        stacks={stack}
-        isFirstInType={false}
-      />
-    </>
+export default function SectionBakerySim() {
+  return (
+    <Project
+      type="personnelles"
+      images={images}
+      isLink={true}
+      titleLink="https://github.com/MaxencePeq/BakerySimulator"
+      title="Bakery Simulator"
+      year="2025"
+      description={
+        <p>
+          Simulateur de gestion de boulangerie de type idle. Le serveur de jeu
+          est fermé depuis ; un mode debug accompagne le système de comptes.
+        </p>
+      }
+      stacks={stack}
+    />
   );
-  return content;
 }

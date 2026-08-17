@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Navbar from "./navbar";
-import Footer from "./footer";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 type AppProps = {
   darkmode: boolean;
@@ -9,7 +9,7 @@ type AppProps = {
   content: React.ReactNode;
 };
 
-function ComponentPage({ darkmode, setDarkmode, content }: AppProps) {
+function Page({ darkmode, setDarkmode, content }: AppProps) {
   // bg-bg : #181e37 en sombre, #f6f8fc en clair
   const { pathname, hash, key } = useLocation();
 
@@ -20,18 +20,8 @@ function ComponentPage({ darkmode, setDarkmode, content }: AppProps) {
     else window.scrollTo(0, 0);
   }, [pathname, hash, key]);
 
-  useEffect(() => {
-    document.title = "Portfolio Maxence";
-
-    let link: HTMLLinkElement | null =
-      document.querySelector("link[rel~='icon']");
-    if (!link) {
-      link = document.createElement("link");
-      link.rel = "icon";
-      document.head.appendChild(link);
-    }
-    link.href = "/img/me/mePhoto.png";
-  }, []);
+  // Le titre est désormais statique dans index.html : les crawlers et les
+  // aperçus de partage le lisent sans exécuter le JS.
 
   return (
     <div className="bg-bg min-h-screen">
@@ -46,4 +36,4 @@ function ComponentPage({ darkmode, setDarkmode, content }: AppProps) {
   );
 }
 
-export default ComponentPage;
+export default Page;

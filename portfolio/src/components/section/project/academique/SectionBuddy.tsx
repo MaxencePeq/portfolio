@@ -1,8 +1,4 @@
-import Project from "../../../project";
-
-type SectionProps = {
-  darkmode: boolean;
-};
+import Project from "../../../Project";
 
 const images = [
   "/img/project/academique/buddy/accueil.png",
@@ -23,30 +19,23 @@ const stack = [
   { img: "/img/stack/git.png", title: "Git" },
 ];
 
-export default function SectionBuddy({ darkmode }: SectionProps) {
+export default function SectionBuddy() {
   return (
-    <>
-      <Project
-        darkmode={darkmode}
-        type={"académiques"}
-        images={images}
-        title={"Buddy System"}
-        year={"2026"}
-        isLink={true}
-        titleLink={"https://buddysystem.calvin-nogueira.fr/"}
-        description={
-          <>
-            {" "}
-            <p className="">
-              Réseau social étudiant : messagerie, amis, groupes, événements et
-              profils. Projet universitaire, ouvert à l'inscription.
-              <br />{" "}
-            </p>{" "}
-          </>
-        }
-        stacks={stack}
-        isFirstInType={true}
-      />
-    </>
+    <Project
+      type="académiques"
+      images={images}
+      title="Buddy System"
+      year="2026"
+      isLink={true}
+      titleLink="https://buddysystem.calvin-nogueira.fr/"
+      description={
+        <p>
+          Réseau social étudiant : messagerie, amis, groupes, événements et
+          profils. Projet universitaire, ouvert à l'inscription.
+          <br />
+        </p>
+      }
+      stacks={stack}
+    />
   );
 }

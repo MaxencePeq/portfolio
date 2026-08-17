@@ -1,8 +1,4 @@
-import Project from "../../../project";
-
-type SectionProps = {
-  darkmode: boolean;
-};
+import Project from "../../../Project";
 
 const images = [
   "/img/project/pro/lebelouvrage/2.png",
@@ -20,39 +16,32 @@ const stack = [
   { img: "/img/stack/git.png", title: "Git" },
 ];
 
-export default function SectionLebelouvrage({ darkmode }: SectionProps) {
-  const underlineColor = darkmode ? "decoration-[#2563EB]" : "decoration-white";
-  const content = (
-    <>
-      <Project
-        darkmode={darkmode}
-        type={"professionnelles"}
-        images={images}
-        title={"Lebel Ouvrage"}
-        year={"2026"}
-        isLink={true}
-        titleLink={"https://lebelouvrage.bzh"}
-        bigTitle={true}
-        description={
-          <>
-            {" "}
-            <p className="" id="realisation">
-              Est un site vitrine pour un artisan fait en collaboration avec mon
-              collègue{" "}
-              <a
-                href="https://calvin-nogueira.fr"
-                className={`underline ${underlineColor} decoration-2`}
-              >
-                Calvin Nogueira
-              </a>
-              .
-            </p>{" "}
-          </>
-        }
-        stacks={stack}
-        isFirstInType={true}
-      />
-    </>
+export default function SectionLebelouvrage() {
+  return (
+    <Project
+      type="professionnelles"
+      images={images}
+      title="Lebel Ouvrage"
+      year="2026"
+      isLink={true}
+      titleLink="https://lebelouvrage.bzh"
+      bigTitle={true}
+      description={
+        <p id="realisation">
+          Est un site vitrine pour un artisan fait en collaboration avec mon
+          collègue
+          <a
+            href="https://calvin-nogueira.fr"
+            target="_blank"
+            rel="noreferrer"
+            className="underline decoration-accent decoration-2"
+          >
+            Calvin Nogueira
+          </a>
+          .
+        </p>
+      }
+      stacks={stack}
+    />
   );
-  return content;
 }

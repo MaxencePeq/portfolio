@@ -1,15 +1,10 @@
-import SectionTitle from "../sectionTitle";
-import Darkbox from "../box/darkbox";
-import DarkButton from "./darkButton";
+import SectionTitle from "../SectionTitle";
+import Darkbox from "../box/Darkbox";
+import DarkButton from "../button/DarkButton";
 
-type SectionProps = {
-  darkmode: boolean;
-};
-
-export default function SectionPassionButton({ darkmode }: SectionProps) {
+export default function SectionPassionButton() {
   return (
     <Darkbox
-      darkmode={darkmode}
       content={
         <div className="flex flex-col gap-y-10">
           <SectionTitle text="Activité hors de l'école" />
@@ -20,10 +15,12 @@ export default function SectionPassionButton({ darkmode }: SectionProps) {
                 <img
                   src="/img/illustration/bojangles.jpg"
                   alt=""
+                  loading="lazy"
+                  decoding="async"
                   className="lg:w-auto lg:max-h-50 max-h-20"
                 />
               </div>
-              <p className="text-text text-2xl font-light">Littérature</p>
+              <h3 className="text-text text-2xl font-light">Littérature</h3>
               <p className="text-muted text-sm mt-2 italic">
                 Bourdeaut · Danielewski · Tolkien, Jaworski...
               </p>
@@ -34,10 +31,12 @@ export default function SectionPassionButton({ darkmode }: SectionProps) {
                 <img
                   src="/img/illustration/pianist.jpg"
                   alt=""
+                  loading="lazy"
+                  decoding="async"
                   className="lg:w-auto lg:max-h-50 max-h-20"
                 />
               </div>
-              <p className="text-text text-2xl font-light">Piano</p>
+              <h3 className="text-text text-2xl font-light">Piano</h3>
               <p className="text-muted text-sm mt-2 italic">
                 Chopin · Testard · Hisaichi...
               </p>
