@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-type navbarProps = {
+type NavbarProps = {
   darkmode: boolean;
   setDarkmode: (darkmode: boolean) => void;
 };
@@ -31,7 +31,7 @@ const socials = [
   },
 ];
 
-export default function Navbar({ darkmode, setDarkmode }: navbarProps) {
+export default function Navbar({ darkmode, setDarkmode }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {

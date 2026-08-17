@@ -1,8 +1,4 @@
-import Project from "../../../project";
-
-type SectionProps = {
-  darkmode: boolean;
-};
+import Project from "../../../Project";
 
 const images = [
   "/img/project/perso/webmusic/index.png",
@@ -19,31 +15,22 @@ const stack = [
   { img: "/img/stack/css-3.png", title: "CSS" },
 ];
 
-export default function SectionWebMusic({ darkmode }: SectionProps) {
-  const content = (
-    <>
-      <Project
-        darkmode={darkmode}
-        type={"personnelles"}
-        images={images}
-        isLink={true}
-        titleLink="https://github.com/MaxencePeq/WebMusic"
-        title={"WebMusic"}
-        year={"2024"}
-        description={
-          <>
-            {" "}
-            <p className="">
-              Répertoire de genres, albums et artistes, avec génération
-              automatique des liens YouTube vers les morceaux. Un de mes
-              premiers projets.
-            </p>{" "}
-          </>
-        }
-        stacks={stack}
-        isFirstInType={false}
-      />
-    </>
+export default function SectionWebMusic() {
+  return (
+    <Project
+      type="personnelles"
+      images={images}
+      isLink={true}
+      titleLink="https://github.com/MaxencePeq/WebMusic"
+      title="WebMusic"
+      year="2024"
+      description={
+        <p>
+          Répertoire de genres, albums et artistes, avec génération automatique
+          des liens YouTube vers les morceaux. Un de mes premiers projets.
+        </p>
+      }
+      stacks={stack}
+    />
   );
-  return content;
 }

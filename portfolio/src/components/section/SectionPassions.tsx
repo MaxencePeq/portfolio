@@ -1,9 +1,5 @@
-import Darkbox from "../box/darkbox";
-import Slider from "../slider/ImageSlider";
-
-type SectionProps = {
-  darkmode: boolean;
-};
+import Darkbox from "../box/Darkbox";
+import ImageSlider from "../slider/ImageSlider";
 
 const images = [
   {
@@ -26,32 +22,30 @@ const images = [
   { src: "/img/illustration/witcher.jpg", title: "The witcher" },
   {
     src: "/img/illustration/wager.jpg",
-    title: "Les naufragées du Wager",
+    title: "Les naufragés du Wager",
   },
   { src: "/img/illustration/petitprince.jpg", title: "Le petit prince" },
-  { src: "/img/illustration/foret.jpg", title: "L'appel de la fôret" },
+  { src: "/img/illustration/foret.jpg", title: "L'appel de la forêt" },
 ];
 
-export default function SectionPassions({ darkmode }: SectionProps) {
+export default function SectionPassions() {
   // titre en type-section + text-text, paragraphes en type-body + text-muted
   const textClasse = "type-body text-muted";
   return (
     <div className="flex w-full min-w-0 flex-col gap-y-4">
       <Darkbox
-        darkmode={darkmode}
         content={
           <div className="flex min-w-0 flex-col gap-6">
-            <p className="type-section text-text">Mes Passions</p>
+            <h1 className="type-section text-text">Mes Passions</h1>
             <div className="flex flex-col gap-4 mt-4">
-              <p className={`${textClasse}`}>
-                {" "}
+              <p className={textClasse}>
                 Je cultive depuis maintenant 6 ans mon amour pour la musique et
                 plus particulièrement pour le piano. <br />
                 La lecture est aussi une passion dévorante, avec les classiques
                 français et l'horreur fantastique, mais aussi la peinture
-                aquarelle...{" "}
+                aquarelle...
               </p>
-              <p className={`${textClasse}`}>
+              <p className={textClasse}>
                 Pour les intéressé·es, voici une petite sélection de mes
                 lectures favorites :
               </p>
@@ -59,10 +53,7 @@ export default function SectionPassions({ darkmode }: SectionProps) {
           </div>
         }
       />
-      <Darkbox
-        darkmode={darkmode}
-        content={<Slider images={images} darkmode={darkmode} />}
-      />
+      <Darkbox content={<ImageSlider images={images} />} />
     </div>
   );
 }

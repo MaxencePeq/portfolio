@@ -1,8 +1,4 @@
-import Project from "../../../project";
-
-type SectionProps = {
-  darkmode: boolean;
-};
+import Project from "../../../Project";
 
 const images = [
   "/img/project/perso/portfolio/1.png",
@@ -20,30 +16,22 @@ const stack = [
   { img: "/img/stack/git.png", title: "Git" },
 ];
 
-export default function SectionPortfolio({ darkmode }: SectionProps) {
-  const content = (
-    <>
-      <Project
-        darkmode={darkmode}
-        type={"personnelles"}
-        images={images}
-        title={"Mon portfolio "}
-        year={"2026"}
-        isLink={true}
-        titleLink={"https://github.com/MaxencePeq/portfolio"}
-        description={
-          <>
-            {" "}
-            <p className="">
-              Ce joli portfolio en React / Tailwind CSS et Docker pour le
-              développement et la mise en production !
-            </p>{" "}
-          </>
-        }
-        stacks={stack}
-        isFirstInType={true}
-      />
-    </>
+export default function SectionPortfolio() {
+  return (
+    <Project
+      type="personnelles"
+      images={images}
+      title="Mon portfolio"
+      year="2026"
+      isLink={true}
+      titleLink="https://github.com/MaxencePeq/portfolio"
+      description={
+        <p>
+          Ce joli portfolio en React / Tailwind CSS et Docker pour le
+          développement et la mise en production !
+        </p>
+      }
+      stacks={stack}
+    />
   );
-  return content;
 }

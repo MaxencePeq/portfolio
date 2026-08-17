@@ -25,6 +25,9 @@ export default function Footer() {
             <a
               key={label}
               href={to}
+              // mailto: reste dans l'onglet courant, le reste part en externe
+              target={to.startsWith("http") ? "_blank" : undefined}
+              rel={to.startsWith("http") ? "noreferrer" : undefined}
               className="text-text transition-colors hover:text-accent-text"
             >
               {label}

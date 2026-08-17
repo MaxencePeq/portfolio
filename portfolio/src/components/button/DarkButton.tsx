@@ -1,18 +1,18 @@
 import { Link } from "react-router-dom";
 
-type buttonProps = {
+type DarkButtonProps = {
   text: string;
   textMobile?: string;
   dark: boolean;
   to?: string;
 };
 
-export default function darkButton({
+export default function DarkButton({
   text,
   dark,
   to,
   textMobile,
-}: buttonProps) {
+}: DarkButtonProps) {
   // dark : bg-accent + text-accent-contrast / sinon : border-line + text-text
   let backgroundColor = "bg-accent";
   let textColor = "text-accent-contrast";
@@ -46,7 +46,13 @@ export default function darkButton({
           {label}
         </Link>
       ) : (
-        <a href={to} className={style}>
+        <a
+          href={to}
+          // mailto: reste dans l'onglet courant, le reste part en externe
+          target={to?.startsWith("http") ? "_blank" : undefined}
+          rel={to?.startsWith("http") ? "noreferrer" : undefined}
+          className={style}
+        >
           {label}
         </a>
       )}
