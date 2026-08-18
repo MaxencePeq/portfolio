@@ -12,7 +12,7 @@ const stack = [
   { img: "/img/stack/symfony.webp", title: "Symfony" },
   { img: "/img/stack/js.webp", title: "JavaScript" },
   { img: "/img/stack/twig.webp", title: "Twig" },
-  { img: "/img/stack/bootstrap.webp", title: "Bootstrap" },
+  { img: "/img/stack/tailwind.webp", title: "Tailwind" },
   { img: "/img/stack/git.webp", title: "Git" },
 ];
 
@@ -28,8 +28,9 @@ export default function SectionLebelouvrage() {
       bigTitle={true}
       description={
         <p id="realisation">
-          Est un site vitrine pour un artisan fait en collaboration avec mon
-          collègue
+          Site vitrine d'un artisan installateur de portails et systèmes de
+          sécurité à Arzal (56), sans aucune présence en ligne jusque-là.
+          Développé avec &nbsp;
           <a
             href="https://calvin-nogueira.fr"
             target="_blank"
@@ -38,7 +39,11 @@ export default function SectionLebelouvrage() {
           >
             Calvin Nogueira
           </a>
-          .
+          . Le formulaire de devis est un parcours de qualification en plusieurs
+          étapes — type de demande, matériel, commune via l'API geo.api.gouv.fr,
+          photos de l'existant — pour que l'artisan reçoive un dossier complet
+          par mail automatiquement. Référencement local appuyé sur des données
+          structurées LocalBusiness. En ligne depuis six mois.
         </p>
       }
       stacks={stack}

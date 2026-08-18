@@ -26,8 +26,14 @@ export default function SectionWebMusic() {
       year="2024"
       description={
         <p>
-          Répertoire de genres, albums et artistes, avec génération automatique
-          des liens YouTube vers les morceaux. Un de mes premiers projets.
+          Répertoire musical — genres, artistes, albums, morceaux — sur une base
+          de 10 700 entrées réparties en six tables, avec recherche et lien de
+          recherche YouTube construit à la volée. Mon premier projet PHP : une
+          entité et une collection par table, des exceptions dédiées, un accès
+          PDO centralisé. Développé sur Mac, il refuse de démarrer sur Linux car
+          PSR-4 fait correspondre le nom d'une classe à celui de son fichier, et
+          les fichiers en minuscules passaient inaperçus sur un système
+          insensible à la casse.
         </p>
       }
       stacks={stack}

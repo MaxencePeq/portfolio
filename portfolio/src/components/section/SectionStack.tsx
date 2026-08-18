@@ -13,10 +13,8 @@ const frameworks = [
 const outils = [
   { img: "/img/stack/docker.webp", title: "Docker" },
   { img: "/img/stack/mysql.webp", title: "MySQL" },
-  { img: "/img/stack/serveur-sql.webp", title: "SQL" },
   { img: "/img/stack/git.webp", title: "Git" },
   { img: "/img/stack/phpmyadmin.webp", title: "phpMyAdmin" },
-  { img: "/img/stack/composer.webp", title: "Composer" },
   { img: "/img/stack/tailwind.webp", title: "Tailwind CSS" },
   { img: "/img/stack/bootstrap.webp", title: "Bootstrap" },
 ];
@@ -28,10 +26,7 @@ const languages = [
   { img: "/img/stack/python.webp", title: "Python" },
   { img: "/img/stack/twig.webp", title: "Twig" },
   { img: "/img/stack/blade.webp", title: "Blade" },
-  { img: "/img/stack/jsx.webp", title: "JSX" },
   { img: "/img/stack/typescript.webp", title: "TypeScript" },
-  { img: "/img/stack/html-5.webp", title: "HTML" },
-  { img: "/img/stack/css-3.webp", title: "CSS" },
 ];
 
 export default function SectionStack() {
