@@ -7,6 +7,7 @@ type NavbarProps = {
 };
 
 const links = [
+  { label: "À propos", to: "/#apropos" },
   { label: "Projets", to: "/#projets" },
   { label: "Stack", to: "/#stack" },
   { label: "Passions", to: "/#passions" },

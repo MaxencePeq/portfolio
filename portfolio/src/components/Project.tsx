@@ -24,8 +24,6 @@ export default function Project({
   description,
   stacks,
 }: ProjectProps) {
-  // Le projet mis en avant est un h2, les cartes de la grille des h3 : ça donne
-  // un plan de page sans saut de niveau sous le h1 de la home.
   const Heading = bigTitle ? "h2" : "h3";
   const titleSize = bigTitle ? "type-section" : "type-card";
   const card = "bg-surface border border-line rounded-2xl overflow-hidden";
