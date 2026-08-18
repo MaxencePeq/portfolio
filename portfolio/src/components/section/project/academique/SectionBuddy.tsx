@@ -30,8 +30,13 @@ export default function SectionBuddy() {
       titleLink="https://buddysystem.calvin-nogueira.fr/"
       description={
         <p>
-          Réseau social étudiant : messagerie, amis, groupes, événements et
-          profils. Projet universitaire, ouvert à l'inscription.
+          Plateforme de parrainage interculturel pour l'URCA : elle met en
+          relation les étudiants internationaux qui arrivent à Reims, les
+          étudiants de l'université et les familles rémoises — échanges
+          linguistiques, sorties, messagerie. Projet mené à quatre à partir d'un
+          cahier des charges, avec la conception de la base de données en amont,
+          du MCD au MPD. Interface bilingue FR/EN, le site est ouvert a
+          l'inscription
           <br />
         </p>
       }

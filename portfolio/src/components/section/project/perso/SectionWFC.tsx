@@ -24,9 +24,12 @@ export default function SectionWFC() {
       titleLink="https://github.com/MaxencePeq/Website-Colorblind-Extension"
       description={
         <p>
-          Extension navigateur qui réajuste les couleurs d'une page pour les
-          daltoniens — dont je fais partie. Le code est sur GitHub, la mise en
-          ligne arrive.
+          Extension navigateur qui recalcule les couleurs d'une page pour les
+          rendre distinguables aux daltoniens (j'en suis un). Premier prototype
+          raté : les matrices simule le daltonisme mais ne le corrige pas.
+          J'étudie la daltonisation : isoler l'information perdue et la
+          réinjecter dans les canaux encore perçus. Le développement est encore
+          en cours.
         </p>
       }
       stacks={stack}

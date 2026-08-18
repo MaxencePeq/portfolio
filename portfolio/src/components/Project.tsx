@@ -55,7 +55,12 @@ export default function Project({
           )}
         </Heading>
 
-        <div className="type-body text-muted">{description}</div>
+        {/* hyphens-auto : sans césure, le justifié creuse des rivières de
+            blancs dans les cartes en demi-largeur. Marche grâce au
+            lang="fr" posé sur <html>. */}
+        <div className="type-body text-muted text-justify hyphens-auto">
+          {description}
+        </div>
 
         <div className="flex flex-row gap-x-2 gap-y-2 flex-wrap">
           {stacks.map((stack) => (
