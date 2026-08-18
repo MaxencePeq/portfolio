@@ -35,9 +35,8 @@ export default function SectionBuddy() {
           étudiants de l'université et les familles rémoises — échanges
           linguistiques, sorties, messagerie. Projet mené à quatre à partir d'un
           cahier des charges, avec la conception de la base de données en amont,
-          du MCD au MPD. Interface bilingue FR/EN, le site est ouvert a
-          l'inscription
-          <br />
+          du MCD au MPD. Interface bilingue FR/EN, le site est ouvert à
+          l'inscription.
         </p>
       }
       stacks={stack}
