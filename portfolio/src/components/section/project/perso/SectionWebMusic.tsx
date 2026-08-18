@@ -23,7 +23,7 @@ export default function SectionWebMusic() {
       isLink={true}
       titleLink="https://github.com/MaxencePeq/WebMusic"
       title="WebMusic"
-      year="2024"
+      year="2025"
       description={
         <p>
           Répertoire musical — genres, artistes, albums, morceaux — sur une base

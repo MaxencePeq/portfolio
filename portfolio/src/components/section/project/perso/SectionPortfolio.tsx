@@ -27,11 +27,11 @@ export default function SectionPortfolio() {
       titleLink="https://github.com/MaxencePeq/portfolio"
       description={
         <p>
-          Le site que vous lisez acuellement ! React, TypeScript et Tailwind,
+          Le site que vous lisez actuellement ! React, TypeScript et Tailwind,
           Docker pour l'environnement de développement. J'ai bâti le thème
           clair/sombre sur des tokens CSS, optimisé les dépendances et le
-          chargement du site. Ce portfolio à subi une refonte majeur, améliorant
-          la page d'accueil, la passant de 13 Mo à moins de 400 Ko.
+          chargement du site. Ce portfolio a subi une refonte majeure,
+          améliorant la page d'accueil, la passant de 13 Mo à moins de 400 Ko.
         </p>
       }
       stacks={stack}

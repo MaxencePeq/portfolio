@@ -30,7 +30,7 @@ export default function SectionLebelouvrage() {
         <p id="realisation">
           Site vitrine d'un artisan installateur de portails et systèmes de
           sécurité à Arzal (56), sans aucune présence en ligne jusque-là.
-          Développé avec &nbsp;
+          Développé avec{" "}
           <a
             href="https://calvin-nogueira.fr"
             target="_blank"

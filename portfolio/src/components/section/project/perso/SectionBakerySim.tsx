@@ -28,7 +28,7 @@ export default function SectionBakerySim() {
         <p>
           Jeu incrémental (idle) de gestion de boulangerie, écrit en PHP natif
           sans une ligne de JavaScript au début de mes études. La contrainte du
-          php créer un problème intéressant : la progression est reconstruite à
+          PHP crée un problème intéressant : la progression est reconstruite à
           chaque page à partir du temps écoulé depuis la dernière action —
           autoclickers, vente automatique, et un prix de la farine qui fluctue.
           L'état de la partie vit dans la session, avec un système de prestige
