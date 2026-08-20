@@ -38,7 +38,7 @@ export default function SectionPassionButton() {
               </div>
               <h3 className="text-text text-2xl font-light">Piano</h3>
               <p className="text-muted text-sm mt-2 italic">
-                Chopin · Testard · Hisaichi...
+                Chopin · Testard · Hisaishi...
               </p>
             </div>
           </div>

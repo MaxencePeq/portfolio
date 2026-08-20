@@ -11,7 +11,8 @@ const reperes = [
   },
   {
     label: "Actuellement",
-    value: `Alternance en développement d'applications ou web fullstack — de Août 2026 à Août 2027`,
+    value:
+      "Alternance en développement d'applications ou web fullstack — d'août 2026 à août 2027",
   },
   {
     label: "Langues",
@@ -19,7 +20,7 @@ const reperes = [
   },
   {
     label: "Mobilité",
-    value: "Permis B, véhiculé — Reims, Epernay et alentours",
+    value: "Permis B, véhiculé — Reims, Épernay et alentours",
   },
 ];
 
@@ -39,16 +40,16 @@ export default function SectionApropos() {
 
               <p>
                 Je suis daltonien, ce qui me force à toujours penser à
-                l'accessiblité de mes projets (et demander à quelqu'un si mon
-                rouge est vraiment rouge).
+                l'accessiblité de mes projets.
               </p>
 
               <p>
-                A pars le travail, je suis un passioné d'art. <br />
-                Musique : Je suis pianiste depuis 6 ans bientôt. <br />
-                Peinture : Je m'exerce a l'aquarelle. <br />
-                Littérature : Je dévore plusieurs livre par mois (science
-                politique, classique, fantaisie, etc ).
+                A part le travail, je suis un passionné d'art. D'abord de
+                musique, je suis pianiste depuis 6 ans bientôt. Mais aussi la
+                peinture où je m'exerce à l'aquarelle, et surtout la littérature
+                : je dévore plusieurs livres par mois (classique, science
+                politique, fantaisie, etc). Vous pouvez retrouver mes
+                recommandations dans la partie "Passions".
                 <br /> Cinéma, sport et j'en passe !
               </p>
 
