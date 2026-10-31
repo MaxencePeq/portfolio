@@ -1,13 +1,9 @@
-import Bookbox from "../box/Bookbox";
+import Bookbox from "./ui/box/Bookbox";
 
 type Image = { src: string; title: string };
 type ImageSliderProps = { images: Image[] };
 
 /**
- * Étagère à défilement infini. Le ruban est dupliqué et translaté de -50% en
- * boucle : quand l'animation reboucle, la copie est pile à la position de
- * l'original, la jointure est invisible.
- *
  * L'écart entre les cartes est un `mr-*` sur chaque <li>, PAS un `gap` du
  * flex : avec un gap, 2N cartes n'ont que 2N-1 écarts et -50% tombe à côté
  * d'un demi-écart -> saut visible à chaque boucle.

@@ -1,4 +1,4 @@
-import DescriptionProjetStack from "./box/DescriptionProjetStack";
+import DescriptionProjetStack from "./ui/box/DescriptionProjetStack";
 import Carrousel from "./Carrousel";
 
 type ProjectProps = {
