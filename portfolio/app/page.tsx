@@ -1,6 +1,15 @@
 import Page from "@/components/Page";
 import { section } from "@/utils/section";
 import Home from "@/data/home";
+import Apropos from "@/data/apropos";
+import Lebelouvrage from "@/data/projects/lebelouvrage";
+import Buddy from "@/data/projects/buddy";
+import WFC from "@/data/projects/wfc";
+import BakerySim from "@/data/projects/bakerysim";
+import WebMusic from "@/data/projects/webmusic";
+import Portfolio from "@/data/projects/portfolio";
+import Stacks from "@/data/stacks";
+import PassionButton from "@/components/PassionButton";
 
 export default function HomePage() {
   return (
@@ -8,21 +17,19 @@ export default function HomePage() {
       content={
         <>
           {section(<Home />, "accueil")}
-          {/*
-          {section(<SectionApropos />, "apropos")}
-          {section(<SectionLebelouvrage />, "projets")}
+          {section(<Apropos />, "apropos")}
+          {section(<Lebelouvrage />, "projets")}
           {section(
             <div className="w-full max-w-275 min-w-0 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <SectionBuddy />
-              <SectionWFC />
-              <SectionPortfolio />
-              <SectionBakerySim />
-              <SectionWebMusic />
+              <Buddy />
+              <WFC />
+              <Portfolio />
+              <BakerySim />
+              <WebMusic />
             </div>,
           )}
-          {section(<SectionStack />, "stack")}
-          {section(<SectionPassionButton />, "passions")}
-           */}
+          {section(<Stacks />, "stack")}
+          {section(<PassionButton />, "passions")}
         </>
       }
     />

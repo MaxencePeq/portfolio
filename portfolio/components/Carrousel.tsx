@@ -1,7 +1,9 @@
+"use client";
 import { useState, useEffect } from "react";
+import Image, { type StaticImageData } from "next/image";
 
 type CarrouselProps = {
-  images: string[];
+  images: StaticImageData[];
   /** Nom du projet : sert à décrire les captures pour les lecteurs d'écran. */
   alt: string;
 };
@@ -45,14 +47,14 @@ export default function Carrousel({ images, alt }: CarrouselProps) {
         style={{ transform: `translateX(-${current * 100}%)` }}
       >
         {images.map((img, i) => (
-          <img
+          <Image
             key={i}
             src={img}
             alt={`${alt} — capture ${i + 1} sur ${images.length}`}
+            sizes="(min-width: 1100px) 1100px, 100vw"
             // 1re slide en eager : la carte affiche toujours quelque chose tout
             // de suite, les suivantes sont hors du viewport horizontal
             loading={i === 0 ? "eager" : "lazy"}
-            decoding="async"
             className="w-full h-auto max-h-[38vh] lg:max-h-[45vh] object-contain flex-shrink-0"
           />
         ))}

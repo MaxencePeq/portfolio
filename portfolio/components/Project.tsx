@@ -1,9 +1,10 @@
+import type { StaticImageData } from "next/image";
 import DescriptionProjetStack from "./ui/box/DescriptionProjetStack";
 import Carrousel from "./Carrousel";
 
 type ProjectProps = {
   type?: "professionnelles" | "personnelles" | "académiques";
-  images: string[];
+  images: StaticImageData[];
   title: string;
   year: string;
   isLink?: boolean;
