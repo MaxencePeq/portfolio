@@ -1,10 +1,8 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+"use client";
 
-type NavbarProps = {
-  darkmode: boolean;
-  setDarkmode: (darkmode: boolean) => void;
-};
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import ThemeToggle from "./ui/ThemeToggle";
 
 const links = [
   { label: "À propos", to: "/#apropos" },
@@ -32,7 +30,7 @@ const socials = [
   },
 ];
 
-export default function Navbar({ darkmode, setDarkmode }: NavbarProps) {
+export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -52,7 +50,7 @@ export default function Navbar({ darkmode, setDarkmode }: NavbarProps) {
       className={`flex flex-row items-center justify-between gap-3 border-b px-4 py-4 transition-colors duration-300 sm:px-10 sm:py-5 ${glass}`}
     >
       {/* type-eyebrow + text-text */}
-      <Link to="/#accueil" className="type-eyebrow text-text text-sm">
+      <Link href="/#accueil" className="type-eyebrow text-text text-sm">
         MP
       </Link>
 
@@ -61,7 +59,7 @@ export default function Navbar({ darkmode, setDarkmode }: NavbarProps) {
         {links.map(({ label, to }) => (
           <Link
             key={label}
-            to={to}
+            href={to}
             className="text-muted transition-colors hover:text-text"
           >
             {label}
@@ -85,30 +83,7 @@ export default function Navbar({ darkmode, setDarkmode }: NavbarProps) {
           </a>
         ))}
 
-        <button
-          type="button"
-          onClick={() => setDarkmode(!darkmode)}
-          aria-label={darkmode ? "Passer en clair" : "Passer en sombre"}
-          className="cursor-pointer transition-colors hover:text-text"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-            className="h-5 w-5"
-          >
-            {darkmode ? (
-              <>
-                <circle cx="12" cy="12" r="4" />
-                <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
-              </>
-            ) : (
-              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
-            )}
-          </svg>
-        </button>
+        <ThemeToggle />
       </div>
     </nav>
   );
