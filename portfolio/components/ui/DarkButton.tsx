@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 type DarkButtonProps = {
   text: string;
@@ -36,13 +36,13 @@ export default function DarkButton({
     text
   );
 
-  // route interne -> Link (SPA) ; mailto/http -> <a> classique
+  // route interne -> Link ; mailto/http -> <a> classique
   const internal = to?.startsWith("/") && !to.startsWith("//");
 
   return (
     <div className={hover}>
       {internal ? (
-        <Link to={to!} className={style}>
+        <Link href={to!} className={style}>
           {label}
         </Link>
       ) : (

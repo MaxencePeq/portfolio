@@ -8,12 +8,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Maxence Pequeno" }],
 };
 
-// couleur de la barre du navigateur mobile, alignée sur le token --bg
+// couleur de la barre du navigateur mobile, alignée sur le --bg sombre (thème par défaut)
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f6f8fc" },
-    { media: "(prefers-color-scheme: dark)", color: "#181e37" },
-  ],
+  themeColor: "#181e37",
 };
 
 // Sombre par défaut (classe dans le HTML) ; s'exécute avant l'affichage pour

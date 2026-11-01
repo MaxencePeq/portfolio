@@ -4,7 +4,7 @@ import Page from "../../portfolio/components/Page";
 import SectionHome from "./components/section/SectionHome";
 import SectionApropos from "./components/section/SectionApropos";
 import SectionPassionButton from "./components/section/SectionPassionButton";
-import { section } from "./utils/section";
+import { section } from "../../portfolio/utils/section";
 import SectionPassions from "./components/section/SectionPassions";
 import SectionCv from "./components/section/SectionCV";
 import SectionStack from "./components/section/SectionStack";
