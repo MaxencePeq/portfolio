@@ -1,3 +1,5 @@
+import { cacheLife } from "next/cache";
+
 const contacts = [
   {
     label: "maxence.pequeno@icloud.com",
@@ -10,7 +12,13 @@ const contacts = [
   },
 ];
 
-export default function Footer() {
+async function getYear() {
+  "use cache";
+  cacheLife("days");
+  return new Date().getFullYear();
+}
+
+export default async function Footer() {
   return (
     <footer className="border-t border-line">
       <div className="w-full max-w-275 min-w-0 mx-auto flex flex-col gap-10 px-4 py-16 sm:px-6 lg:px-8">
@@ -36,7 +44,7 @@ export default function Footer() {
         </div>
 
         <p className="font-mono text-xs tracking-wider text-muted">
-          © {new Date().getFullYear()} Maxence Pequeno
+          © {await getYear()} Maxence Pequeno
         </p>
       </div>
     </footer>

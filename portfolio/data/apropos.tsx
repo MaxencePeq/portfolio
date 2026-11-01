@@ -31,8 +31,8 @@ export default function Apropos() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div className="type-body text-muted flex flex-col gap-4">
               <p>
-                Développeur passioné, je code depuis le lycée et je n&apos;ai
-                toujours pas trouvé le jour où ça m&apos;ennuie.
+                Développeur passioné, je code depuis le lycée et cette passion
+                ne m'a toujours pas quittée.
               </p>
 
               <p>

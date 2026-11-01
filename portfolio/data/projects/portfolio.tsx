@@ -4,12 +4,7 @@ import portfolio2 from "@/public/img/project/perso/portfolio/2.webp";
 import portfolio3 from "@/public/img/project/perso/portfolio/3.webp";
 import portfolio4 from "@/public/img/project/perso/portfolio/4.webp";
 
-const images = [
-  portfolio1,
-  portfolio2,
-  portfolio3,
-  portfolio4,
-];
+const images = [portfolio1, portfolio2, portfolio3, portfolio4];
 
 const stack = [
   { img: "/img/stack/react.webp", title: "React" },
@@ -31,11 +26,12 @@ export default function Portfolio() {
       titleLink="https://github.com/MaxencePeq/portfolio"
       description={
         <p>
-          Le site que vous lisez actuellement ! React, TypeScript et Tailwind,
-          Docker pour l'environnement de développement. J'ai bâti le thème
-          clair/sombre sur des tokens CSS, optimisé les dépendances et le
-          chargement du site. Ce portfolio a subi une refonte majeure,
-          améliorant la page d'accueil, la passant de 13 Mo à moins de 400 Ko.
+          Le site que vous lisez actuellement ! Précédement React, TypeScript et
+          Tailwind, Docker pour l'environnement de développement, j'ai désormais
+          changé pour Next.Js, pour améliorer les performances et la qualité du
+          code. J'ai optimisé les dépendances et le chargement du site. Ce
+          portfolio a subi une refonte majeure, améliorant la page d'accueil, la
+          passant de 13 Mo à moins de 400 Ko.
         </p>
       }
       stacks={stack}
