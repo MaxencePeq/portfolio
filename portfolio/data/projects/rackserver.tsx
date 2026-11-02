@@ -23,7 +23,7 @@ export default function RackServer() {
           et l'autre me sert d'hébergeur web avec des conteneurs Docker pour les
           projets, et Caddy pour les certificats HTTPS et redirige les requêtes
           vers les conteneurs. Les sites sont mis en ligne avec mon nom de
-          domaine via CloudFlare Tunnel, tous les Pi sont accessibles via alias
+          domaine via Cloudflare Tunnel, tous les Pi sont accessibles via alias
           SSH, et chaque port de la box réseau est sécurisé et fermé. Ce
           portfolio est hébergé sur ce même serveur.
         </p>

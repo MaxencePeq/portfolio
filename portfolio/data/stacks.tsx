@@ -25,6 +25,7 @@ const languages = [
   { img: "/img/stack/php.webp", title: "PHP" },
   { img: "/img/stack/js.webp", title: "JavaScript" },
   { img: "/img/stack/cs.webp", title: "C#" },
+  { img: "/img/stack/serveur-sql.webp", title: "SQL" },
   { img: "/img/stack/python.webp", title: "Python" },
   { img: "/img/stack/blade.webp", title: "Blade" },
   { img: "/img/stack/typescript.webp", title: "TypeScript" },
