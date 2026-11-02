@@ -26,12 +26,12 @@ export default function Portfolio() {
       titleLink="https://github.com/MaxencePeq/portfolio"
       description={
         <p>
-          Le site que vous lisez actuellement ! Précédement React, TypeScript et
-          Tailwind, Docker pour l'environnement de développement, j'ai désormais
-          changé pour Next.Js, pour améliorer les performances et la qualité du
-          code. J'ai optimisé les dépendances et le chargement du site. Ce
-          portfolio a subi une refonte majeure, améliorant la page d'accueil, la
-          passant de 13 Mo à moins de 400 Ko.
+          Le site que vous lisez actuellement ! Précédement React, j'ai
+          désormais changé pour Next.Js (TypeScript, Tailwind, pnpm), pour
+          améliorer les performances et la qualité du code. J'ai optimisé les
+          dépendances et le chargement du site. Ce portfolio a subi une refonte
+          majeure, améliorant la page d'accueil, la passant de 13 Mo à moins de
+          400 Ko.
         </p>
       }
       stacks={stack}

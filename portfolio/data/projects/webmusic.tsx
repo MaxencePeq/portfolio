@@ -4,12 +4,7 @@ import webmusicAlbum from "@/public/img/project/perso/webmusic/album.webp";
 import webmusicAlbumTrack from "@/public/img/project/perso/webmusic/album-track.webp";
 import webmusicSong from "@/public/img/project/perso/webmusic/song.webp";
 
-const images = [
-  webmusicIndex,
-  webmusicAlbum,
-  webmusicAlbumTrack,
-  webmusicSong,
-];
+const images = [webmusicIndex, webmusicAlbum, webmusicAlbumTrack, webmusicSong];
 
 const stack = [
   { img: "/img/stack/php.webp", title: "PHP" },

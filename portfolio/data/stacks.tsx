@@ -8,14 +8,15 @@ const frameworks = [
   { img: "/img/stack/laravel.webp", title: "Laravel" },
   { img: "/img/stack/react.webp", title: "React" },
   { img: "/img/stack/net.webp", title: ".NET" },
-  { img: "/img/stack/api.webp", title: "API Platform" },
+  { img: "/img/stack/nextjs.png", title: "Next.js" },
 ];
 
 const outils = [
   { img: "/img/stack/docker.webp", title: "Docker" },
   { img: "/img/stack/mysql.webp", title: "MySQL" },
   { img: "/img/stack/git.webp", title: "Git" },
-  { img: "/img/stack/phpmyadmin.webp", title: "phpMyAdmin" },
+  { img: "/img/stack/jinja2.png", title: "Jinja2" },
+  { img: "/img/stack/api.webp", title: "API Platform" },
   { img: "/img/stack/tailwind.webp", title: "Tailwind CSS" },
   { img: "/img/stack/bootstrap.webp", title: "Bootstrap" },
 ];
@@ -25,9 +26,14 @@ const languages = [
   { img: "/img/stack/js.webp", title: "JavaScript" },
   { img: "/img/stack/cs.webp", title: "C#" },
   { img: "/img/stack/python.webp", title: "Python" },
-  { img: "/img/stack/twig.webp", title: "Twig" },
   { img: "/img/stack/blade.webp", title: "Blade" },
   { img: "/img/stack/typescript.webp", title: "TypeScript" },
+];
+
+const AI = [
+  { img: "/img/autre/claude-code.png", title: "Claude Code" },
+  { img: "/img/autre/mcp.svg", title: "Model Context Protocol" },
+  { img: "/img/autre/Linux.png", title: "Linux" },
 ];
 
 export default function Stacks() {
@@ -101,6 +107,28 @@ export default function Stacks() {
                     />
                   }
                   name={language.title}
+                />
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-col gap-y-2">
+            <h3 className="text-text font-semibold text-sm sm:text-base">
+              IA & Autres
+            </h3>
+            <div className="flex flex-wrap gap-2 justify-start">
+              {AI.map((IA) => (
+                <Stackbox
+                  key={IA.title}
+                  image={
+                    <Image
+                      src={IA.img}
+                      alt=""
+                      width={40}
+                      height={40}
+                      className="h-8 sm:h-10 w-8 sm:w-10 object-contain"
+                    />
+                  }
+                  name={IA.title}
                 />
               ))}
             </div>
