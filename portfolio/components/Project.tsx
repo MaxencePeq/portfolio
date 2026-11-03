@@ -4,7 +4,7 @@ import Carrousel from "./Carrousel";
 
 type ProjectProps = {
   type?: "professionnelles" | "personnelles" | "académiques";
-  images: StaticImageData[];
+  images?: StaticImageData[];
   title: string;
   year: string;
   isLink?: boolean;
@@ -32,7 +32,7 @@ export default function Project({
 
   return (
     <div className={`w-full max-w-275 min-w-0 mx-auto ${card} ${hover}`}>
-      <Carrousel images={images} alt={title} />
+      {images && <Carrousel images={images} alt={title} />}
 
       <div className="flex flex-col gap-y-4 p-6 sm:gap-y-5 sm:p-10">
         <p className="type-eyebrow text-muted">

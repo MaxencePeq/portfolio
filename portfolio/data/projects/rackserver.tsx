@@ -22,11 +22,11 @@ export default function RackServer() {
           d'alimentation, et une structure Rack-Serveur imprimée en 3D. Le
           switch redistribue le réseau vers les Pi, l'un me sert de DNS avec
           Pi-hole et l'autre me sert d'hébergeur web avec des conteneurs Docker
-          pour les projets, et Caddy pour les certificats HTTPS et redirige les
-          requêtes vers les conteneurs. Les sites sont mis en ligne avec mon nom
-          de domaine via Cloudflare Tunnel pour ne pas ouvrir de ports sur ma
-          boxe. Tous les Pi sont accessibles via alias SSH. Ce portfolio est
-          hébergé sur ce même serveur.
+          pour les projets, et Caddy gère le HTTPS et sert de reverse proxy vers
+          les conteneurs. Les sites sont mis en ligne avec mon nom de domaine
+          via Cloudflare Tunnel pour ne pas ouvrir de ports sur ma boxe. Tous
+          les Pi sont accessibles via alias SSH. Ce portfolio est hébergé sur ce
+          même serveur.
         </p>
       }
       stacks={stacks}

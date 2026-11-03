@@ -16,7 +16,7 @@ export default function Home() {
             </h1>
 
             <p className="type-body text-muted max-w-[52ch] animate-slide-in [animation-delay:340ms]">
-              Back-end Symfony et Laravel, front-end React. Un site
+              Back-end Symfony et FastAPI, front-end React. Un site
               d&apos;artisan en production, et une extension pour daltoniens —
               parce que j&apos;en suis un.
             </p>
@@ -37,7 +37,7 @@ export default function Home() {
             </div>
 
             <p className="type-eyebrow text-muted border-t border-line pt-6 animate-slide-in [animation-delay:320ms]">
-              Symfony · Laravel · React · .NET
+              Symfony · FastAPI · React · Next.js
             </p>
           </div>
           <Image

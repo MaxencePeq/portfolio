@@ -27,6 +27,7 @@ const rows = [
         { img: "/img/stack/twig.webp", title: "Twig" },
         { img: "/img/stack/blade.webp", title: "Blade" },
         { img: "/img/stack/jinja2.webp", title: "Jinja2" },
+        { img: "/img/stack/fastapi.webp", title: "FastAPI" },
       ],
     },
   ],
@@ -46,6 +47,7 @@ const rows = [
       title: "Données & Infra",
       items: [
         { img: "/img/stack/mysql.webp", title: "MySQL" },
+        { img: "/img/stack/sqlite.webp", title: "SQLite" },
         { img: "/img/stack/docker.webp", title: "Docker" },
         { img: "/img/autre/Linux.webp", title: "Linux" },
         { img: "/img/stack/git.webp", title: "Git" },
@@ -80,13 +82,15 @@ export default function Stacks() {
                       <Stackbox
                         key={item.title}
                         image={
-                          <Image
-                            src={item.img}
-                            alt="" /* le nom est déjà affiché sous le logo */
-                            width={40}
-                            height={40}
-                            className="h-8 sm:h-10 w-8 sm:w-10 object-contain"
-                          />
+                          item.img && (
+                            <Image
+                              src={item.img}
+                              alt="" /* le nom est déjà affiché sous le logo */
+                              width={40}
+                              height={40}
+                              className="h-8 sm:h-10 w-8 sm:w-10 object-contain"
+                            />
+                          )
                         }
                         name={item.title}
                       />
