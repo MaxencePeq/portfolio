@@ -8,14 +8,14 @@ const frameworks = [
   { img: "/img/stack/laravel.webp", title: "Laravel" },
   { img: "/img/stack/react.webp", title: "React" },
   { img: "/img/stack/net.webp", title: ".NET" },
-  { img: "/img/stack/nextjs.png", title: "Next.js" },
+  { img: "/img/stack/nextjs.webp", title: "Next.js" },
 ];
 
 const outils = [
   { img: "/img/stack/docker.webp", title: "Docker" },
   { img: "/img/stack/mysql.webp", title: "MySQL" },
   { img: "/img/stack/git.webp", title: "Git" },
-  { img: "/img/stack/jinja2.png", title: "Jinja2" },
+  { img: "/img/stack/jinja2.webp", title: "Jinja2" },
   { img: "/img/stack/api.webp", title: "API Platform" },
   { img: "/img/stack/tailwind.webp", title: "Tailwind CSS" },
   { img: "/img/stack/bootstrap.webp", title: "Bootstrap" },
@@ -32,9 +32,9 @@ const languages = [
 ];
 
 const AI = [
-  { img: "/img/autre/claude-code.png", title: "Claude Code" },
+  { img: "/img/autre/claude-code.webp", title: "Claude Code" },
   { img: "/img/autre/mcp.svg", title: "Model Context Protocol" },
-  { img: "/img/autre/Linux.png", title: "Linux" },
+  { img: "/img/autre/Linux.webp", title: "Linux" },
 ];
 
 export default function Stacks() {
