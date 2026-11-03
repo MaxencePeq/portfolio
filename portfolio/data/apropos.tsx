@@ -17,8 +17,7 @@ const reperes = [
   },
   {
     label: "Mobilité",
-    value:
-      "Permis B, véhiculé — Reims, Épernay, Châlons-en-Champagne et alentours",
+    value: "Permis B, véhiculé — Reims, Épernay, Châlons et alentours",
   },
 ];
 
@@ -51,6 +50,14 @@ export default function Apropos() {
               </p>
 
               <p>Le reste est dans les projets en dessous.</p>
+
+              <div className="flex items-center">
+                <DarkButton
+                  text="Me contacter"
+                  dark={true}
+                  to="mailto:maxence.pequeno@icloud.com"
+                />
+              </div>
             </div>
 
             <dl className="flex flex-col gap-3">
@@ -64,14 +71,6 @@ export default function Apropos() {
                 </div>
               ))}
             </dl>
-          </div>
-
-          <div className="flex items-center justify-center">
-            <DarkButton
-              text="Me contacter"
-              dark={true}
-              to="mailto:maxence.pequeno@icloud.com"
-            />
           </div>
         </div>
       }

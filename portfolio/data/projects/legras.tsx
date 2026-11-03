@@ -6,7 +6,7 @@ export default function Legras() {
   return (
     <Project
       type="professionnelles"
-      title="Legras Industries — Développeur alternant"
+      title="Legras Industries - Développeur alternant"
       year="2026 – 2027"
       bigTitle={true}
       description={
