@@ -13,13 +13,7 @@ const images = [
   lebelouvrage6,
 ];
 
-const stack = [
-  { img: "/img/stack/symfony.webp", title: "Symfony" },
-  { img: "/img/stack/js.webp", title: "JavaScript" },
-  { img: "/img/stack/twig.webp", title: "Twig" },
-  { img: "/img/stack/tailwind.webp", title: "Tailwind" },
-  { img: "/img/stack/git.webp", title: "Git" },
-];
+const stack = ["Symfony", "Javascript", "Twig", "Tailwind", "Git"];
 
 export default function Lebelouvrage() {
   return (

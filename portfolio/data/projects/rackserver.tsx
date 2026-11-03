@@ -16,7 +16,7 @@ export default function RackServer() {
       bigTitle={true}
       description={
         <p>
-          Voici mon rack serveur fait maison. Monté avec un Switch Netgear
+          Voici mon rack serveur fait mazison. Monté avec un Switch Netgear
           GS308E, un Raspberry Pi 4, deux Raspberry Pi 3-B, un dock de 8 ports
           d'alimentation, et une structure Rack-Server imprimée en 3D. Le switch
           redistribue le réseau vers les Pi, l'un me sert de DNS avec un PiHole
@@ -28,6 +28,7 @@ export default function RackServer() {
           portfolio est hébergé sur ce même serveur.
         </p>
       }
+      stacks={""}
     />
   );
 }

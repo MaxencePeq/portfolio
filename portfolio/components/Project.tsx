@@ -11,7 +11,7 @@ type ProjectProps = {
   titleLink?: string;
   bigTitle?: boolean;
   description: React.ReactNode;
-  stacks?: { img: string; title: string }[];
+  stacks?: string[];
 };
 
 export default function Project({
@@ -64,7 +64,7 @@ export default function Project({
         {stacks && stacks.length > 0 && (
           <div className="flex flex-row gap-x-2 gap-y-2 flex-wrap">
             {stacks.map((stack) => (
-              <DescriptionProjetStack key={stack.title} name={stack.title} />
+              <DescriptionProjetStack key={stack} name={stack} />
             ))}
           </div>
         )}

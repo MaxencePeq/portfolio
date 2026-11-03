@@ -3,20 +3,9 @@ import bakeryIntro from "@/public/img/project/perso/bakery-sim/intro.webp";
 import bakeryFull from "@/public/img/project/perso/bakery-sim/full.webp";
 import bakeryDebug from "@/public/img/project/perso/bakery-sim/debug.webp";
 
-const images = [
-  bakeryIntro,
-  bakeryFull,
-  bakeryDebug,
-];
+const images = [bakeryIntro, bakeryFull, bakeryDebug];
 
-const stack = [
-  { img: "/img/stack/php.webp", title: "PHP" },
-  { img: "/img/stack/pdo.webp", title: "PDO" },
-  { img: "/img/stack/mysql.webp", title: "MySQL" },
-  { img: "/img/stack/composer.webp", title: "Composer" },
-  { img: "/img/stack/html-5.webp", title: "HTML" },
-  { img: "/img/stack/css-3.webp", title: "CSS" },
-];
+const stack = ["PHP", "PDO", "MySQL", "Composer", "HTML", "CSS"];
 
 export default function BakerySim() {
   return (

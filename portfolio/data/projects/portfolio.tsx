@@ -6,14 +6,7 @@ import portfolio4 from "@/public/img/project/perso/portfolio/4.webp";
 
 const images = [portfolio1, portfolio2, portfolio3, portfolio4];
 
-const stack = [
-  { img: "/img/stack/react.webp", title: "React" },
-  { img: "/img/stack/docker.webp", title: "Docker" },
-  { img: "/img/stack/tailwind.webp", title: "Tailwind CSS" },
-  { img: "/img/stack/typescript.webp", title: "TypeScript" },
-  { img: "/img/stack/jsx.webp", title: "JSX" },
-  { img: "/img/stack/git.webp", title: "Git" },
-];
+const stack = ["React", "Docker", "Tailwind CSS", "TypeScript", "JSX", "Git"];
 
 export default function Portfolio() {
   return (

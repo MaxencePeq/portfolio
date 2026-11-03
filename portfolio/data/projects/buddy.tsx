@@ -16,13 +16,13 @@ const images = [
 ];
 
 const stack = [
-  { img: "/img/stack/symfony.webp", title: "Symfony" },
-  { img: "/img/stack/js.webp", title: "JavaScript" },
-  { img: "/img/stack/twig.webp", title: "Twig" },
-  { img: "/img/stack/bootstrap.webp", title: "Bootstrap" },
-  { img: "/img/stack/mysql.webp", title: "MySQL" },
-  { img: "/img/stack/serveur-sql.webp", title: "SQL" },
-  { img: "/img/stack/git.webp", title: "Git" },
+  "Symfony",
+  "JavaScript",
+  "Twig",
+  "Bootstrap",
+  "MySQL",
+  "SQL",
+  "Git",
 ];
 
 export default function Buddy() {

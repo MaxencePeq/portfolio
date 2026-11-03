@@ -6,11 +6,7 @@ import wfc4 from "@/public/img/project/perso/WFC/4.webp";
 
 const images = [wfc1, wfc2, wfc3, wfc4];
 
-const stack = [
-  { img: "/img/stack/js.webp", title: "JavaScript" },
-  { img: "/img/stack/html-5.webp", title: "HTML" },
-  { img: "/img/stack/css-3.webp", title: "CSS" },
-];
+const stack = ["JavaScript", "HTML", "CSS"];
 
 export default function WFC() {
   return (
