@@ -20,9 +20,10 @@ export default function HomePage() {
           {section(<Home />, "accueil")}
           {section(<Apropos />, "apropos")}
           {section(<Lebelouvrage />, "projets")}
-          {section(<RackServer />, "projets")}
+
           {section(
             <div className="w-full max-w-275 min-w-0 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <RackServer />
               <Buddy />
               <WFC />
               <Portfolio />

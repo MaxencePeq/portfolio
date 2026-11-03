@@ -15,15 +15,7 @@ const images = [
   buddyProfile,
 ];
 
-const stack = [
-  "Symfony",
-  "JavaScript",
-  "Twig",
-  "Bootstrap",
-  "MySQL",
-  "SQL",
-  "Git",
-];
+const stack = ["Symfony", "JavaScript", "Bootstrap", "MySQL", "Git"];
 
 export default function Buddy() {
   return (

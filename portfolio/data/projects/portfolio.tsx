@@ -6,7 +6,7 @@ import portfolio4 from "@/public/img/project/perso/portfolio/4.webp";
 
 const images = [portfolio1, portfolio2, portfolio3, portfolio4];
 
-const stack = ["React", "Docker", "Tailwind CSS", "TypeScript", "JSX", "Git"];
+const stack = ["Next.js", "Docker", "Tailwind CSS", "TypeScript", "Git"];
 
 export default function Portfolio() {
   return (
@@ -19,8 +19,8 @@ export default function Portfolio() {
       titleLink="https://github.com/MaxencePeq/portfolio"
       description={
         <p>
-          Le site que vous lisez actuellement ! Précédement React, j'ai
-          désormais changé pour Next.Js (TypeScript, Tailwind, pnpm), pour
+          Le site que vous lisez actuellement ! Précédemment React, j'ai
+          désormais changé pour Next.js (TypeScript, Tailwind, pnpm), pour
           améliorer les performances et la qualité du code. J'ai optimisé les
           dépendances et le chargement du site. Ce portfolio a subi une refonte
           majeure, améliorant la page d'accueil, la passant de 13 Mo à moins de

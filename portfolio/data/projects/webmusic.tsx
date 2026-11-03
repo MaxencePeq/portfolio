@@ -6,7 +6,7 @@ import webmusicSong from "@/public/img/project/perso/webmusic/song.webp";
 
 const images = [webmusicIndex, webmusicAlbum, webmusicAlbumTrack, webmusicSong];
 
-const stack = ["PHP", "PDO", "Composer", "HTML", "CSS"];
+const stack = ["PHP", "PDO", "Composer"];
 
 export default function WebMusic() {
   return (
