@@ -13,13 +13,7 @@ const images = [
   lebelouvrage6,
 ];
 
-const stack = [
-  { img: "/img/stack/symfony.webp", title: "Symfony" },
-  { img: "/img/stack/js.webp", title: "JavaScript" },
-  { img: "/img/stack/twig.webp", title: "Twig" },
-  { img: "/img/stack/tailwind.webp", title: "Tailwind" },
-  { img: "/img/stack/git.webp", title: "Git" },
-];
+const stack = ["Symfony", "JavaScript", "Twig", "Tailwind CSS", "Git"];
 
 export default function Lebelouvrage() {
   return (
@@ -48,7 +42,7 @@ export default function Lebelouvrage() {
           étapes — type de demande, matériel, commune via l'API geo.api.gouv.fr,
           photos de l'existant — pour que l'artisan reçoive un dossier complet
           par mail automatiquement. Référencement local appuyé sur des données
-          structurées LocalBusiness. En ligne depuis six mois.
+          structurées LocalBusiness. En ligne depuis mai 2026.
         </p>
       }
       stacks={stack}

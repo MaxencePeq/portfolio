@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Maxence Pequeno — Développeur full-stack",
   description:
-    "Étudiant développeur full-stack. Back-end Symfony et Laravel, front-end React. Un site d'artisan en production et une extension navigateur pour daltoniens.",
+    "Étudiant développeur full-stack. Back-end Symfony et FastAPI, front-end React. Un site d'artisan en production et une extension navigateur pour daltoniens.",
   authors: [{ name: "Maxence Pequeno" }],
 };
 
@@ -24,6 +24,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="icon" href="/favicon.ico" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"

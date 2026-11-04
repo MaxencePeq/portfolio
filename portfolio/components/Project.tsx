@@ -4,14 +4,14 @@ import Carrousel from "./Carrousel";
 
 type ProjectProps = {
   type?: "professionnelles" | "personnelles" | "académiques";
-  images: StaticImageData[];
+  images?: StaticImageData[];
   title: string;
   year: string;
   isLink?: boolean;
   titleLink?: string;
   bigTitle?: boolean;
   description: React.ReactNode;
-  stacks?: { img: string; title: string }[];
+  stacks?: string[];
 };
 
 export default function Project({
@@ -32,7 +32,7 @@ export default function Project({
 
   return (
     <div className={`w-full max-w-275 min-w-0 mx-auto ${card} ${hover}`}>
-      <Carrousel images={images} alt={title} />
+      {images && <Carrousel images={images} alt={title} />}
 
       <div className="flex flex-col gap-y-4 p-6 sm:gap-y-5 sm:p-10">
         <p className="type-eyebrow text-muted">
@@ -64,7 +64,7 @@ export default function Project({
         {stacks && stacks.length > 0 && (
           <div className="flex flex-row gap-x-2 gap-y-2 flex-wrap">
             {stacks.map((stack) => (
-              <DescriptionProjetStack key={stack.title} name={stack.title} />
+              <DescriptionProjetStack key={stack} name={stack} />
             ))}
           </div>
         )}
