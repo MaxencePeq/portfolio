@@ -1,81 +1,45 @@
 # Portfolio
 
-Portfolio personnel conçu pour présenter les compétences, projets et expériences professionnelles.
+Portfolio personnel de Maxence Pequeno, développeur full-stack : projets, compétences, parcours et CV.
 
-## Description
+## Stack
 
-Ce projet constitue une application web moderne destinée à servir de vitrine professionnelle. Il offre une plateforme centralisée pour mettre en avant les réalisations, compétences techniques et parcours professionnel, avec une expérience utilisateur optimisée et une présentation adaptée aux appareils mobiles.
+- **Next.js 16** (App Router, Cache Components) avec **React 19** et **TypeScript**
+- **Tailwind CSS 4** : thème clair/sombre piloté par des variables CSS
+- **pnpm** comme gestionnaire de paquets
+- **Docker** : image multi-stage avec la sortie `standalone` de Next.js
 
-## Architecture Technique
+Aucune dépendance en dehors de Next.js et React : carrousel, défilement des livres et bascule de thème sont faits à la main.
 
-Le projet repose sur une architecture moderne combinant :
+## Pages
 
-- **Framework UI** : React 19 avec TypeScript
-- **Bundler** : Docker et Vite pour la compilation et le développement optimisé
-- **Routage** : React Router DOM pour la navigation multi-pages
-- **Styling** : Tailwind CSS avec intégration Vite
-- **Animations** : Framer Motion pour les transitions fluides
-- **Composants spécialisés** : Splide pour les carrousels
-- **Intégrations tierces** : React GitHub Calendar pour l'affichage de l'activité GitHub
+- **`/`** : accueil, à propos, expérience et projets, compétences, aperçu des passions
+- **`/cv`** : CV consultable et téléchargeable en PDF
+- **`/passions`** : musique, lecture et sélection de livres
 
-## Contenu et Sections
-
-L'application propose les sections suivantes :
-
-- **Accueil** : Présentation générale et introduction
-- **Stack Technologique** : Compétences techniques et technologies maîtrisées
-- **Projets Professionnels** : Réalisations en contexte professionnel (Lebel Ouvrage)
-- **Projets Académiques** : Travaux réalisés durant la formation (Buddy)
-- **Projets Personnels** : Initiatives propres (Web Music, Portfolio, WFC, Bakery Simulator)
-- **Passions** : Intérêts personnels et domaines de spécialisation
-- **GitHub** : Intégration avec l'activité GitHub de l'utilisateur
-- **CV** : Cursus vitae au format détaillé
-
-## Structure du Projet
+## Structure
 
 ```
-src/
-├── component/          # Composants réutilisables
-│   ├── section/       # Sections de contenu
-│   ├── box/           # Composants d'affichage
-│   ├── button/        # Éléments interactifs
-│   ├── navbar.tsx     # Barre de navigation
-│   └── carrousel.tsx  # Carrousel d'images
-├── types/             # Définitions TypeScript
-├── utils/             # Fonctions utilitaires
-├── routes.tsx         # Configuration du routage
-├── App.tsx            # Composant racine
-└── main.tsx           # Point d'entrée
+portfolio/
+├── app/            # Routes (layout, accueil, cv, passions) et styles globaux
+├── components/     # Navbar, Footer, Project, Carrousel, ImageSlider…
+│   └── ui/         # Boutons, titres de section, boîtes
+├── data/           # Contenu des sections
+│   └── projects/   # Un fichier par projet
+├── utils/          # Helper de section
+└── public/         # Images (webp) et CV
 ```
 
-## Fonctionnalités
+## Production
 
-- Mode sombre/clair avec persistance des préférences utilisateur
-- Navigation fluide entre plusieurs sections
-- Intégration GitHub pour afficher l'historique de contributions
-- Design responsive et adapté à tous les appareils
-- Animations et transitions fluides
-- Performance optimisée avec code splitting
+```bash
+cd portfolio
+docker build -t portfolio:<tag> .
+docker compose up -d
+```
 
-## Technologies
-
-- React 19
-- Docker
-- TypeScript
-- Tailwind CSS
-- Vite
-- Framer Motion
-- React Router DOM
-- Splide
-
-## Maintenance et Développement
-
-Le projet utilise ESLint pour maintenir la qualité du code et TypeScript pour la sécurité des types. Les configurations sont disponibles dans :
-
-- `eslint.config.js` : Règles de linting
-- `tsconfig.json` : Options TypeScript
-- `vite.config.ts` : Configuration Vite
+Le site est auto-hébergé sur un Raspberry Pi (homelab) : Caddy sert de reverse proxy et la mise en ligne passe par Cloudflare Tunnel.
 
 ## Auteur
 
-Maxence Pequeno
+Maxence Pequeno · [GitHub](https://github.com/MaxencePeq) · [LinkedIn](https://www.linkedin.com/in/maxence-pequeno-671581329/)

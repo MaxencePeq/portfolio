@@ -4,13 +4,13 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Maxence Pequeno — Développeur full-stack",
   description:
-    "Étudiant développeur full-stack. Back-end Symfony et Laravel, front-end React. Un site d'artisan en production et une extension navigateur pour daltoniens.",
+    "Étudiant développeur full-stack. Back-end Symfony et FastAPI, front-end React. Un site d'artisan en production et une extension navigateur pour daltoniens.",
   authors: [{ name: "Maxence Pequeno" }],
 };
 
 // couleur de la barre du navigateur mobile, alignée sur le --bg sombre (thème par défaut)
 export const viewport: Viewport = {
-  themeColor: "#181e37",
+  themeColor: "#1c1410",
 };
 
 // Sombre par défaut (classe dans le HTML) ; s'exécute avant l'affichage pour
@@ -24,13 +24,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="icon" href="/favicon.ico" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin=""
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Instrument+Sans:wdth,wght@75..100,400..700&family=JetBrains+Mono:wght@400..700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..800&family=Instrument+Sans:wdth,wght@75..100,400..700&family=JetBrains+Mono:wght@400..700&display=swap"
           rel="stylesheet"
         />
       </head>

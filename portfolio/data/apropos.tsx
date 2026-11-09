@@ -17,7 +17,7 @@ const reperes = [
   },
   {
     label: "Mobilité",
-    value: "Permis B, véhiculé — Reims, Épernay, Chalon et alentours",
+    value: "Permis B, véhiculé — Reims, Épernay, Châlons et alentours",
   },
 ];
 
@@ -31,26 +31,33 @@ export default function Apropos() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div className="type-body text-muted flex flex-col gap-4">
               <p>
-                Développeur passioné, je code depuis le lycée et cette passion
-                ne m'a toujours pas quittée.
+                Développeur passionné, je code depuis le lycée et cette passion
+                ne m'a toujours pas quitté. Étant daltonien, je me force à
+                toujours penser à l&apos;accessibilité de mes projets.
               </p>
 
               <p>
-                Je suis daltonien, ce qui me force à toujours penser à
-                l&apos;accessiblité de mes projets.
-              </p>
-
-              <p>
-                A part le travail, je suis un passionné d&apos;art. D&apos;abord
-                de musique, je suis pianiste depuis 6 ans bientôt. Mais aussi la
-                peinture où je m&apos;exerce à l&apos;aquarelle, et surtout la
-                littérature : je dévore plusieurs livres par mois (classique,
-                science politique, fantaisie, etc). Vous pouvez retrouver mes
-                recommandations dans la partie `&quot;Passions`&quot;.
+                À part l'informatique, je suis un passionné d&apos;art.
+                <br />
+                D&apos;abord de musique, je suis pianiste depuis 2021.
+                <br />
+                Mais aussi la peinture où je m&apos;exerce à l&apos;aquarelle,
+                et surtout la littérature où je dévore plusieurs livres par mois
+                (classique, science politique, fantaisie, etc). <br />
+                Vous pouvez retrouver mes recommandations dans la partie
+                &quot;Passions&quot;.
                 <br /> Cinéma, sport et j&apos;en passe !
               </p>
 
               <p>Le reste est dans les projets en dessous.</p>
+
+              <div className="flex items-center">
+                <DarkButton
+                  text="Me contacter"
+                  dark={true}
+                  to="mailto:maxence.pequeno@icloud.com"
+                />
+              </div>
             </div>
 
             <dl className="flex flex-col gap-3">
@@ -64,14 +71,6 @@ export default function Apropos() {
                 </div>
               ))}
             </dl>
-          </div>
-
-          <div className="flex items-center justify-center">
-            <DarkButton
-              text="Me contacter"
-              dark={true}
-              to="mailto:maxence.pequeno@icloud.com"
-            />
           </div>
         </div>
       }
