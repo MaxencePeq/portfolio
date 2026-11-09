@@ -1,7 +1,7 @@
 import Page from "@/components/Page";
 import Darkbox from "@/components/ui/box/Darkbox";
 
-const CV_PATH = "/MaxenceCV.pdf";
+const CV_PATH = "/CV2027.pdf";
 
 export default function SectionCv() {
   // Mêmes tokens que DarkButton : le swap clair/sombre est géré par le CSS.
