@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 // couleur de la barre du navigateur mobile, alignée sur le --bg sombre (thème par défaut)
 export const viewport: Viewport = {
-  themeColor: "#181e37",
+  themeColor: "#1c1410",
 };
 
 // Sombre par défaut (classe dans le HTML) ; s'exécute avant l'affichage pour
@@ -31,7 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           crossOrigin=""
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Instrument+Sans:wdth,wght@75..100,400..700&family=JetBrains+Mono:wght@400..700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..800&family=Instrument+Sans:wdth,wght@75..100,400..700&family=JetBrains+Mono:wght@400..700&display=swap"
           rel="stylesheet"
         />
       </head>

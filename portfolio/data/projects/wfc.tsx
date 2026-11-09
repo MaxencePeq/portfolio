@@ -22,9 +22,9 @@ export default function WFC() {
           Extension navigateur qui recalcule les couleurs d'une page pour les
           rendre distinguables aux daltoniens (j'en suis un). Premier prototype
           raté : les matrices simulent le daltonisme mais ne le corrigent pas.
-          J'étudie la daltonisation : isoler l'information perdue et la
-          réinjecter dans les canaux encore perçus. Le développement est encore
-          en cours.
+          J'étudie donc actuellement la daltonisation plus en profondeur :
+          isoler l'information perdue et la réinjecter dans les canaux encore
+          perçus. Le développement est toujours en cours.
         </p>
       }
       stacks={stack}

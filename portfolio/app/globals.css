@@ -10,27 +10,29 @@
    Utilisables en Tailwind : bg-surface, text-muted, border-line,
    text-accent-text, bg-accent... Le swap clair/sombre est automatique. */
 :root {
-  --bg: #f6f8fc;
-  --surface: #ffffff;
-  --surface-2: #f1f4fa;
-  --line: #e3e8f2;
-  --text: #0f1730;
-  --muted: #59637f;
-  --accent: #1d4ed8;
-  --accent-text: #1d4ed8;
-  --accent-contrast: #ffffff;
+  /* clair : papier kraft, encre brune, accent citrouille brûlée */
+  --bg: #f7efe2;
+  --surface: #fffaf2;
+  --surface-2: #f1e4d0;
+  --line: #e4d2b8;
+  --text: #2b1a10;
+  --muted: #7a5c45;
+  --accent: #a8461a;
+  --accent-text: #a8461a;
+  --accent-contrast: #fff8ee;
 }
 
 .dark {
-  --bg: #181e37;
-  --surface: #232b47;
-  --surface-2: #2c365a;
-  --line: #333f66;
-  --text: #e9edf7;
-  --muted: #9aa6c6;
-  --accent: #2563eb;
-  --accent-text: #6fb4ff;
-  --accent-contrast: #ffffff;
+  /* sombre : bois de châtaignier, feuilles rousses */
+  --bg: #1c1410;
+  --surface: #271c16;
+  --surface-2: #32241c;
+  --line: #45322a;
+  --text: #f3e6d4;
+  --muted: #b89b80;
+  --accent: #b5541f;
+  --accent-text: #e8944f;
+  --accent-contrast: #fff8ee;
 }
 
 /* `inline` est obligatoire : sans lui Tailwind résout var(--bg) une seule fois
@@ -46,7 +48,7 @@
   --color-accent-text: var(--accent-text);
   --color-accent-contrast: var(--accent-contrast);
 
-  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
   --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }

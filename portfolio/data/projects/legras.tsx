@@ -13,11 +13,11 @@ export default function Legras() {
         <p>
           En alternance, je fais le lien entre plusieurs équipes et
           l&apos;informatique : je recueille leurs besoins, puis je conçois et
-          livre les outils internes qui y répondent. Pour l&apos;équipe
-          homologation, j&apos;ai développé un intranet qui génère
-          automatiquement les certificats de conformité : on saisit un code,
-          l&apos;application croise les données de plusieurs fichiers Excel et
-          produit le certificat au format XML, sans aucune saisie manuelle.
+          livre les outils internes qui y répondent. Pour les équipes des
+          bureaux, j&apos;ai développé un intranet qui génère automatiquement
+          certains papiers. On saisit un code, l&apos;application croise les
+          données de plusieurs sources d'informations et produit le fichier au
+          format XML, sans aucune saisie manuelle.
         </p>
       }
       stacks={stack}

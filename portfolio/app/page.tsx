@@ -21,7 +21,7 @@ export default function HomePage() {
           {section(<Home />, "accueil")}
           {section(<Apropos />, "apropos")}
           {section(
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-22">
               <Legras />
               <Lebelouvrage />
             </div>,

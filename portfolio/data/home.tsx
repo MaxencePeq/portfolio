@@ -41,7 +41,7 @@ export default function Home() {
             </p>
           </div>
           <Image
-            src="/img/mePhoto.webp"
+            src="/img/me.jpeg"
             alt="Maxence Pequeno"
             fetchPriority="high"
             height={500}

@@ -51,11 +51,10 @@ export default function Carrousel({ images, alt }: CarrouselProps) {
             key={i}
             src={img}
             alt={`${alt} — capture ${i + 1} sur ${images.length}`}
-            sizes="(min-width: 1100px) 1100px, 100vw"
             // 1re slide en eager : la carte affiche toujours quelque chose tout
             // de suite, les suivantes sont hors du viewport horizontal
             loading={i === 0 ? "eager" : "lazy"}
-            className="w-full aspect-video object-contain bg-surface-2 flex-shrink-0"
+            className="w-full max-h-85 aspect-video object-contain bg-surface-2 shrink-0"
           />
         ))}
       </div>
